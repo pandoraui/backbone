@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -5,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
   <meta name="viewport" content="width=device-width">
   <link rel="canonical" href="http://backbonejs.org" />
-  <meta http-equiv="refresh" content="0;url=./index-cn.html">
-  <title>Backbone.js</title>
+  <title>Backbone.js API中文文档</title>
+  <meta name="Keywords" content="JavaScript, Backbone, Backbone.js, Sebastiano Armeli-Battana, mvc, model-view-controller, models, collections, views, framework, ajax, sample, samples, example, examples, download, 模型-视图-控制器, 模型, 集合, 视图, 框架, 样例, 示例, 下载, tttwaca, tttosca"/>
+  <meta name="Description" content="如何高效管理 Web 应用程序中的数目众多的 JavaScript 代码行是一个挑战。Asynchronous JavaScript and XML (Ajax) 交互大量充斥着各种页面，为用户提供了更好体验。越来越普遍的单页界面均由 Ajax 驱动。Backbone 是一个 JavaScript 框架，可用于创建模型-视图-控制器 (model-view-controller, MVC) 类应用程序和单页界面。在本文中，我们将了解 Backbone 如何用于创建 Ajax 应用程序或单页界面。"/>
   <style>
     body {
       font-size: 14px;
@@ -279,21 +281,6 @@
         overflow: scroll;
       }
     }
-    img.figure {
-      width: 100%;
-    }
-    div.columns {
-      display: table;
-      table-layout: fixed;
-      width: 100%;
-    }
-      div.columns ul {
-        margin: 10px 0;
-      }
-    div.col-50 {
-      display: table-cell;
-      width: 50%;
-    }
   </style>
 </head>
 <body>
@@ -304,24 +291,31 @@
       Backbone.js <span class="version">(1.1.2)</span>
     </a>
     <ul class="toc_section">
-      <li>&raquo; <a href="http://github.com/jashkenas/backbone">GitHub Repository</a></li>
-      <li>&raquo; <a href="docs/backbone.html">Annotated Source</a></li>
+        <li>&raquo; <a href="http://www.css88.com/" target="_blank">WEB前端开发首页</a></li>
+      <li>&raquo; <a href="http://github.com/jashkenas/backbone">GitHub 版本库</a></li>
+      <li>&raquo; <a href="docs/backbone.html">带注释的源码</a></li>
     </ul>
-
-    <a class="toc_title" href="#Getting-started">
-      Getting Started
-    </a>
+    <h4>其他前端开发文档</h4>
     <ul class="toc_section">
-      <li>- <a href="#Getting-Started">Introduction</a></li>
-      <li>– <a href="#Model-View-separation">Models and Views</a></li>
-      <li>– <a href="#Model-Collections">Collections</a></li>
-      <li>– <a href="#API-integration">API Integration</a></li>
-      <li>– <a href="#View-rendering">Rendering</a></li>
-      <li>– <a href="#Routing">Routing</a></li>
+        <li>&raquo; <a href="http://www.css88.com/jqapi-1.9/" target="_blank">jQuery API中文文档</a></li>
+        <li>&raquo; <a href="http://www.css88.com/doc/zeptojs_api/" target="_blank">Zepto.js API 中文版</a></li>
+        <li>&raquo; <a href="http://www.css88.com/doc/underscore/" target="_blank">Underscore.js 中文文档</a></li>
+        <li>&raquo; <a href="http://www.css88.com/doc/backbone/" target="_blank">Backbone.js(1.1.2) API中文文档 </a></li>
+        <li>&raquo; <a href="http://www.css88.com/jquery-ui-api/" target="_blank">jQuery UI API中文文档</a></li>
+          <li>&raquo; <a href="http://bootstrap.css88.com/" target="_blank">Bootstrap 中文文档</a></li>
+          <li>&raquo; <a href="http://www.css88.com/book/css/" target="_blank">CSS参考手册</a></li>
+        <li>&raquo; <a href="http://www.css88.com/doc/less/" target="_blank">Less.js 中文文档 </a></li>
     </ul>
+    <a class="toc_title" href="#introduction">
+      介绍（Introduction）
+    </a>
+
+    <a class="toc_title" href="#upgrading">
+      更新（Upgrading）
+    </a>
 
     <a class="toc_title" href="#Events">
-      Events
+      事件（Events）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Events-on">on</a></li>
@@ -335,7 +329,7 @@
     </ul>
 
     <a class="toc_title" href="#Model">
-      Model
+      模型（Model）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Model-extend">extend</a></li>
@@ -373,7 +367,7 @@
     </ul>
 
     <a class="toc_title" href="#Collection">
-      Collection
+      集合（Collection）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Collection-extend">extend</a></li>
@@ -408,7 +402,7 @@
     </ul>
 
     <a class="toc_title" href="#Router">
-      Router
+      路由（Router）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Router-extend">extend</a></li>
@@ -420,14 +414,14 @@
     </ul>
 
     <a class="toc_title" href="#History">
-      History
+      历史（History）
     </a>
     <ul class="toc_section">
       <li>– <a href="#History-start">start</a></li>
     </ul>
 
     <a class="toc_title" href="#Sync">
-      Sync
+      同步（Sync）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Sync">Backbone.sync</a></li>
@@ -437,7 +431,7 @@
     </ul>
 
     <a class="toc_title" href="#View">
-      View
+      视图（View）
     </a>
     <ul class="toc_section">
       <li>– <a href="#View-extend">extend</a></li>
@@ -455,7 +449,7 @@
     </ul>
 
     <a class="toc_title" href="#Utility">
-      Utility
+      实用功能（Utility）
     </a>
     <ul class="toc_section">
       <li>– <a href="#Utility-Backbone-noConflict">Backbone.noConflict</a></li>
@@ -463,7 +457,7 @@
     </ul>
 
     <a class="toc_title" href="#faq">
-      F.A.Q.
+      问答（F.A.Q.）
     </a>
     <ul class="toc_section">
       <li>– <a href="#FAQ-why-backbone">Why Backbone?</a></li>
@@ -477,7 +471,7 @@
     </ul>
 
     <a class="toc_title" href="#examples">
-      Examples
+      案例（Examples）
     </a>
     <ul class="toc_section">
       <li>– <a href="#examples-todos">Todos</a></li>
@@ -526,72 +520,69 @@
     </ul>
 
     <a class="toc_title" href="#changelog">
-      Change Log
+        更新日志（Change Log）
     </a>
 
   </div>
 
   <div class="container">
-
+  <h1> Backbone.js(1.1.2) API中文文档 </h1>
     <p>
       <img id="logo" src="docs/images/backbone.png" alt="Backbone.js" />
     </p>
+    <h3>文档声明：</h3>
+    <ul>
 
+                    <li>根据官方最新的1.1.2版本做了翻译</li>
+                    
+                    <li>Backbone.js (0.5.3)文档请移步<a href="http://www.css88.com/doc/backbone-0.5.3/" target="_blank">http://www.css88.com/doc/backbone-0.5.3/</a>；</li>
+        <li>翻译水平有限，如果您有任何建议，或者拍砖，欢迎在微博上<a href="http://weibo.com/148246293" target="_blank">@愚人码头</a> 联系我。<iframe style="vertical-align: middle;" width="163" height="24" frameborder="0"
+                            allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" border="0"
+                            src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=63&height=24&uid=1477178352&style=2&btn=red&dpc=1"></iframe></li>
+                </ul>
     <p>
-      Backbone.js gives structure to web applications
-      by providing <b>models</b> with key-value binding and custom events,
-      <b>collections</b> with a rich API of enumerable functions,
-      <b>views</b> with declarative event handling, and connects it all to your
-      existing API over a RESTful JSON interface.
+        Backbone.js为复杂WEB应用程序提供模型(<b>models</b>)、集合(<b>collections</b>)、视图(<b>views</b>)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。
     </p>
 
     <p>
-      The project is <a href="http://github.com/jashkenas/backbone/">hosted on GitHub</a>,
-      and the <a href="docs/backbone.html">annotated source code</a> is available,
-      as well as an online <a href="test/">test suite</a>,
-      an <a href="examples/todos/index.html">example application</a>,
-      a <a href="https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">list of tutorials</a>
-      and a <a href="#examples">long list of real-world projects</a> that use Backbone.
-      Backbone is available for use under the <a href="http://github.com/jashkenas/backbone/blob/master/LICENSE">MIT software license</a>.
+          此项目托管在 <a href="http://github.com/jashkenas/backbone/">GitHub</a> 上,
+          并且提供 <a href="docs/backbone.html">带注释的源码</a>,
+          在线的 <a href="test/">测试套件</a>,
+          <a href="examples/todos/index.html">应用示例</a>,
+          <a href="https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">教程列表</a>
+          还有一个 <a href="#examples">实际应用项目的超长列表</a>, 这些项目都使用了 Backbone.
+          Backbone 允许在 <a href="http://github.com/jashkenas/backbone/blob/master/LICENSE">MIT 软件协议</a> 下使用.
+        </p>
+    
+    <p>  
+        你可以在<a href="http://github.com/jashkenas/backbone/issues">GitHub issues 页面</a>及<tt>#documentcloud</tt>频道下的Freenode IRC中 报告 bug 和 讨论功能, 在<a href="https://groups.google.com/forum/#!forum/backbonejs">Google Group</a>合<a href="https://github.com/jashkenas/backbone/wiki">wiki</a>页面中提出问题，或在twitter上 <a href="http://twitter.com/documentcloud">@documentcloud</a>。
     </p>
 
     <p>
-      You can report bugs and discuss features on the
-      <a href="http://github.com/jashkenas/backbone/issues">GitHub issues page</a>,
-      on Freenode IRC in the <tt>#documentcloud</tt> channel, post questions to the
-      <a href="https://groups.google.com/forum/#!forum/backbonejs">Google Group</a>,
-      add pages to the <a href="https://github.com/jashkenas/backbone/wiki">wiki</a>
-      or send tweets to <a href="http://twitter.com/documentcloud">@documentcloud</a>.
+        <i>Backbone是 <a href="http://documentcloud.org/" target="_blank">DocumentCloud</a> 的一个开源组件. </i>
     </p>
 
-    <p>
-      <i>
-        Backbone is an open-source component of
-        <a href="http://documentcloud.org/">DocumentCloud</a>.
-      </i>
-    </p>
 
-    <h2 id="downloads">
-      Downloads &amp; Dependencies
-      <span style="padding-left: 7px; font-size:11px; font-weight: normal;" class="interface">(Right-click, and use "Save As")</span>
+    <h2 id="downloads">下载&amp;依赖
+      <span style="padding-left: 7px; font-size:11px; font-weight: normal;" class="interface">(右键另存为)</span>
     </h2>
 
     <table>
       <tr>
-        <td><a class="punch" href="backbone.js">Development Version (1.1.2)</a></td>
-        <td class="text"><i>60kb, Full source, tons of comments</i></td>
+        <td><a class="punch" href="backbone.js">开发版本 (1.1.2)</a></td>
+        <td class="text"><i>60kb, 完整的源代码，大量的注释</i></td>
       </tr>
       <tr>
-        <td><a class="punch" href="backbone-min.js">Production Version (1.1.2)</a></td>
+        <td><a class="punch" href="backbone-min.js">生产版本 (1.1.2)</a></td>
         <td class="text" style="line-height: 16px;">
-          <i>6.5kb, Packed and gzipped</i><br />
+          <i>6.5kb, 打包和gzip压缩</i><br />
           <small>(<a href="backbone-min.map">Source Map</a>)</small>
         </td>
       </tr>
       <tr>
         <td><a class="punch" href="https://raw.github.com/jashkenas/backbone/master/backbone.js">Edge Version (master)</a></td>
         <td>
-          <i>Unreleased, use at your own risk</i>
+          <i>未发布版本,使用风险自负</i>
           <a class="travis-badge" href="https://travis-ci.org/jashkenas/backbone">
             <img src="https://travis-ci.org/jashkenas/backbone.png" />
           </a>
@@ -599,244 +590,62 @@
       </tr>
     </table>
 
-    <p>
-      Backbone's only hard dependency is
-      <a href="http://underscorejs.org/">Underscore.js</a> <small>( >= 1.5.0)</small>.
-      For RESTful persistence, history support via <a href="#Router">Backbone.Router</a>
-      and DOM manipulation with <a href="#View">Backbone.View</a>, include
-      <b><a href="http://jquery.com">jQuery</a></b> ( >= 1.11.0), and
-      <b><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></b> for older
-      Internet Explorer support.
-      <i>(Mimics of the Underscore and jQuery APIs, such as
-      <a href="http://lodash.com">Lo-Dash</a> and
-      <a href="http://zeptojs.com">Zepto</a>, will
-      also tend to work, with varying degrees of compatibility.)</i>
+    <p> Backbone唯一重度依赖的是<a href="http://www.css88.com/doc/underscore/">Underscore.js</a><small>( >= 1.5.0)</small>（愚人码头注：Underscore.js 中文文档请查看 <a href="http://www.css88.com/doc/underscore/" target="_blank">http://www.css88.com/doc/underscore/</a>）。基于RESTful（一个架构样式的网络系统）的约束，histroy的支持依赖于<a href="#Router">Backbone.Router</a> ，DOM处理依赖于 <a href="#View">Backbone.View</a>，包括<b><a href="http://jquery.com">jQuery</a></b> ( >= 1.11.0), 和 <b><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></b>对旧的IE浏览器的支持。<i>（模仿Underscore 和 jQuery 的APIs，例如 <a href="http://lodash.com">Lo-Dash</a> 和 <a href="http://zeptojs.com">Zepto</a>，在不同的兼容性下也一样能运行）</i>
     </p>
-    <h2 id="Getting-started">Getting Started</h2>
+
+    <h2 id="introduction">介绍（Introduction）</h2>
 
     <p>
-      When working on a web application that involves a lot of JavaScript, one
-      of the first things you learn is to stop tying your data to the DOM. It's all
-      too easy to create JavaScript applications that end up as tangled piles of
-      jQuery selectors and callbacks, all trying frantically to keep data in
-      sync between the HTML UI, your JavaScript logic, and the database on your
-      server. For rich client-side applications, a more structured approach
-      is often helpful.
+        当我们开发含有大量Javascript的web应用程序时，首先你需要做的事情之一便是停止向DOM对象附加数据。 通过复杂多变的jQuery选择符和回调函数很容易创建Javascript应用程序，包括在HTML UI，Javascript逻辑和数据之间保持同步，都不复杂。 但对富客户端应用来说，良好的架构通常是有很多益处的。
+
+    </p>
+
+    <p>通过Backbone，你可以将数据呈现为 <a href="#Model">Models</a>, 你可以对模型进行创建，验证和销毁，以及将它保存到服务器。 任何时候只要UI事件引起模型内的属性变化，模型会触发<i>"change"</i>事件； 所有显示模型数据的 <a href="#View">Views</a> 会接收到该事件的通知，继而视图重新渲染。 你无需查找DOM来搜索指定<i>id</i>的元素去手动更新HTML。 &mdash; 当模型改变了，视图便会自动变化。
     </p>
 
     <p>
-      With Backbone, you represent your data as
-      <a href="#Model">Models</a>, which can be created, validated, destroyed,
-      and saved to the server. Whenever a UI action causes an attribute of
-      a model to change, the model triggers a <i>"change"</i> event; all
-      the <a href="#View">Views</a> that display the model's state can be notified of the
-      change, so that they are able to respond accordingly, re-rendering themselves with
-      the new information. In a finished Backbone app, you don't have to write the glue
-      code that looks into the DOM to find an element with a specific <i>id</i>,
-      and update the HTML manually
-      &mdash; when the model changes, the views simply update themselves.
+        某种意义上说，在用javaScript来创建web项目时，Backbone试图定义一组最小而高效的集合，包括了数据结构（models（模型） 和  collections（集合））和用户接口（views（视图） 和 URLS）。在web开发环境里，到处都是框架（帮你写好了一切），不过这些库需要你的网站在构建的时候符合该框架的样子，风格，默认的行为。但是，Backbone还是作为一个工具，让你可以<i>随心所欲</i>的设计你的网站。
     </p>
 
     <p>
-      Philosophically, Backbone is an attempt to discover the minimal set
-      of data-structuring (models and collections) and user interface (views
-      and URLs) primitives that are generally useful when building web applications with
-      JavaScript. In an ecosystem where overarching, decides-everything-for-you
-      frameworks are commonplace, and many libraries require your site to be
-      reorganized to suit their look, feel, and default behavior — Backbone should
-      continue to be a tool that gives you the <i>freedom</i> to design the full
-      experience of your web application.
+        如果你不懂Backbone或者不确定Backbone能否帮助到你，先运行一下 <a href="#examples">列表中基于Backbone的项目</a>。
     </p>
 
     <p>
-      If you're new here, and aren't yet quite sure what Backbone is for, start by
-      browsing the <a href="#examples">list of Backbone-based projects</a>.
+        文档下面有大量可以运行的例子，请点击 <i>play</i> 执行他们。
     </p>
 
+    <h2 id="upgrading">升级到 1.1</h2>
+
     <p>
-      Many of the code examples in this documentation are runnable, because
-      Backbone is included on this page. 
-      Click the <i>play</i> button to execute them.
+        从Backbone <b>0.9.X</b>系列版本升级到 <b>1.1</b> 应该是相当容易的。如果你从旧版本升级，
+        一定要检查<a href="#changelog">更新日志</a>。简单地说，一些大规模的重大更改是：
     </p>
 
-    <h2 id="Model-View-separation">Models and Views</h2>
+    <ul>
+      <li>如果你想漂亮的更新一个Collection(集合)的内容，增加新的models（模型），删除丢失，和合并那些已经存在，你现在可以调用<a href="#Collection-set">set</a>(以前叫做"update") ，Model（模型）类似的操作也调用<tt>set</tt>。这是目前默认的，当你在collection（集合）上调用<a href="#Collection-fetch">fetch</a>时。为了得到旧的行为，传递<tt>{reset: true}</tt>。
+      </li>
+      <li>
+          如果你的URL片段中有字符，需要URL编码，Backbone现在会在你路由处理程序接收它们作为参数前为你解码（跨浏览器规范的行为）。
+      </li>
+      <li>在<b>0.9.x</b>中，Backbone 事件有了两个新的方法：<a href="#Events-listenTo">listenTo</a> 和 <a href="#Events-stopListening">stopListening</a>，
+      这使得它能更容易地创建Views（视图）监听，当你想 <a href="#View-remove">remove</a> view（视图）时，解除他们所有绑定的监听。
 
-    <img class="figure" src="docs/images/intro-model-view.svg" alt="Model-View Separation.">
+      </li>
+      <li> model（模型）验证现在只默认执行在<a href="#Model-save">save</a>中 &mdash;不再执行在<a href="#Model-set">set</a>中，除非传递了<tt>{validate:true}</tt>选项。model（模型）验证现在会触发一个 <tt>"invalid"</tt>事件，而不是<tt>"error"</tt>事件。
 
-    <p>
-      The single most important thing that Backbone can help you with is keeping
-      your business logic separate from your user interface. When the two are 
-      entangled, change is hard; when logic doesn't depend on UI, your
-      interface becomes easier to work with.
-    </p>
+      </li>
+      <li> 在1.1中 ，Backbone Views（视图）不再有 <tt>options</tt> 参数自动附加在<tt>this.options</tt>上。如果你喜欢可以继续附加。
+      </li>
+      <li> 在1.1中 ，<b>Collection</b>的 <tt>add</tt>, <tt>remove</tt>,
+              <tt>set</tt>, <tt>push</tt>, 和 <tt>shift</tt> 方法现在返回来自collection（集合）的 models（模型）(或 models)。
 
-    <div class="columns">
-      <div class="col-50">
-        <b>Model</b>
-        <ul>
-          <li>Orchestrates data and business logic.</li>
-          <li>Loads and saves from the server.</li>
-          <li>Emits events when data changes.</li>
-        </ul>
-      </div>
-      <div class="col-50">
-        <b>View</b>
-        <ul>
-          <li>Listens for changes and renders UI.</li>
-          <li>Handles user input and interactivity.</li>
-          <li>Sends captured input to the model.</li>
-        </ul>
-      </div>
-    </div>
+      </li>
+    </ul>
 
-    <p>
-      A <b>Model</b> manages an internal table of data attributes, and 
-      triggers <tt>"change"</tt> events when any of its data is modified. 
-      Models handle syncing data with a persistence layer — usually a REST API 
-      with a backing database. Design your models as the atomic reusable objects
-      containing all of the helpful functions for manipulating their particular
-      bit of data. Models should be able to be passed around throughout your app,
-      and used anywhere that bit of data is needed.
-    </p>
+    <h2 id="Events">Backbone.Events（事件）</h2>
 
-    <p>
-      A <b>View</b> is an atomic chunk of user interface. It often renders the
-      data from a specific model, or number of models &mdash; but views can
-      also be data-less chunks of UI that stand alone. 
-      Models should be generally unaware of views. Instead, views listen to
-      the model <tt>"change"</tt> events, and react or re-render themselves 
-      appropriately.
-    </p>
-
-    <h2 id="Model-Collections">Collections</h2>
-
-    <img class="figure" src="docs/images/intro-collections.svg" alt="Model Collections.">
-
-    <p>
-      A <b>Collection</b> helps you deal with a group of related models, handling
-      the loading and saving of new models to the server and providing helper
-      functions for performing aggregations or computations against a list of models.
-      Aside from their own events, collections also proxy through all of the
-      events that occur to models within them, allowing you to listen in one place
-      for any change that might happen to any model in the collection.
-    </p>
-
-    <h2 id="API-integration">API Integration</h2>
-
-    <p>
-      Backbone is pre-configured to sync with a RESTful API. Simply create a 
-      new Collection with the <tt>url</tt> of your resource endpoint:
-    </p>
-
-<pre>
-var Books = Backbone.Collection.extend({
-  url: '/books'
-});
-</pre>
-
-    <p>
-      The <b>Collection</b> and <b>Model</b> components together form a direct 
-      mapping of REST resources using the following methods:
-    </p>
-
-<pre>
-GET  /books/ .... collection.fetch();
-POST /books/ .... collection.create();
-GET  /books/1 ... model.fetch();
-PUT  /books/1 ... model.save();
-DEL  /books/1 ... model.destroy();
-</pre>
-    
-    <p>
-      When fetching raw JSON data from an API, a <b>Collection</b> will 
-      automatically populate itself with data formatted as an array, while 
-      a <b>Model</b> will automatically populate itself with data formatted 
-      as an object:
-    </p>
-
-<pre>
-[{"id": 1}] ..... populates a Collection with one model.
-{"id": 1} ....... populates a Model with one attribute.
-</pre>
-
-    <p>
-      However, it's fairly common to encounter APIs that return data in a 
-      different format than what Backbone expects. For example, consider 
-      fetching a <b>Collection</b> from an API that returns the real data 
-      array wrapped in metadata:
-    </p>
-
-<pre>
-{
-  "page": 1,
-  "limit": 10,
-  "total": 2,
-  "books": [
-    {"id": 1, "title": "Pride and Prejudice"},
-    {"id": 4, "title": "The Great Gatsby"}
-  ] 
-}
-</pre>
-
-    <p>
-      In the above example data, a <b>Collection</b> should populate using the 
-      <tt>"books"</tt> array rather than the root object structure. This 
-      difference is easily reconciled using a <tt>parse</tt> method that 
-      returns (or transforms) the desired portion of API data:
-    </p>
-
-<pre>
-var Books = Backbone.Collection.extend({
-  url: '/books',
-  parse: function(data) {
-    return data.books;
-  }
-});
-</pre>
-
-    <h2 id="View-rendering">View Rendering</h2>
-
-    <img class="figure" src="docs/images/intro-views.svg" alt="View rendering.">
-
-    <p>
-      Each <b>View</b> manages the rendering and user interaction within its own 
-      DOM element. If you're strict about not allowing views to reach outside 
-      of themselves, it helps keep your interface flexible &mdash; allowing 
-      views to be rendered in isolation in any place where they might be needed.
-    </p>
-
-    <p>
-      Backbone remains unopinionated about the process used to render <b>View</b> 
-      objects and their subviews into UI: you define how your models get translated 
-      into HTML (or SVG, or Canvas, or something even more exotic). 
-      It could be as prosaic as a simple 
-      <a href="http://underscorejs.org/#template">Underscore template</a>, or as fancy as the
-      <a href="http://facebook.github.io/react/docs/tutorial.html">React virtual DOM</a>.
-      Some basic approaches to rendering views can be found 
-      in the <a href="https://github.com/jashkenas/backbone/wiki/Backbone%2C-The-Primer">Backbone primer</a>.
-    </p>
-
-    <h2 id="Routing">Routing with URLs</h2>
-
-    <img class="figure" src="docs/images/intro-routing.svg" alt="Routing">
-
-    <p>
-      In rich web applications, we still want to provide linkable, 
-      bookmarkable, and shareable URLs to meaningful locations within an app. 
-      Use the <b>Router</b> to update the browser URL whenever the user
-      reaches a new "place" in your app that they might want to bookmark or share.
-      Conversely, the <b>Router</b> detects changes to the URL &mdash; say, 
-      pressing the "Back" button &mdash; and can tell your application exactly where you 
-      are now.
-    </p>
-
-    <h2 id="Events">Backbone.Events</h2>
-
-    <p>
-      <b>Events</b> is a module that can be mixed in to any object, giving the
-      object the ability to bind and trigger custom named events. Events do not
-      have to be declared before they are bound, and may take passed arguments.
-      For example:
+    <p><b>Events</b> 是一个可以融合到任何对象的模块, 给予 对象绑定和触发自定义事件的能力. Events 在绑定之前 不需要声明, 并且还可以传递参数. 比如:
     </p>
 
 <pre class="runnable">
@@ -852,34 +661,26 @@ object.trigger("alert", "an event");
 </pre>
 
     <p>
-      For example, to make a handy event dispatcher that can coordinate events
-      among different areas of your application: <tt>var dispatcher = _.clone(Backbone.Events)</tt>
-    </p>
+          举个例子, 你可以定义一个事件调度程序，然后在你应用的不同地方调用，例如： <tt>var dispatcher = _.clone(Backbone.Events)</tt>
+        </p>
 
     <p id="Events-on">
-      <b class="header">on</b><code>object.on(event, callback, [context])</code><span class="alias">Alias: bind</span>
+      <b class="header">on</b><code>object.on(event, callback, [context])</code><span class="alias">别名: bind</span>
       <br />
-      Bind a <b>callback</b> function to an object. The callback will be invoked
-      whenever the <b>event</b> is fired.
-      If you have a large number of different events on a page, the convention is to use colons to
-      namespace them: <tt>"poll:start"</tt>, or <tt>"change:selection"</tt>.
-      The event string may also be a space-delimited list of several events...
+        在 object 上绑定一个<b>callback</b>回调函数。
+        只要<b>event</b>触发，该回调函数就会调用。如果你的一个页面含有大量的不同时间，我们约定使用冒号来为事件添加 命名空间
+        俗成地使用冒号来命名：<tt>"poll:start"</tt>, 或 <tt>"change:selection"</tt>。
+        事件字符串也可能是用空格分隔的多个事件列表（愚人码头注：即可以同时绑定多个事件，事件用空格分隔）...
     </p>
 
 <pre>
 book.on("change:title change:author", ...);
 </pre>
 
-    <p>
-      To supply a <b>context</b> value for <tt>this</tt> when the callback is invoked,
-      pass the optional third argument: <tt>model.on('change', this.render, this)</tt>
+    <p> 当回调函数被调用时，通过可选的第三个参数可以为<tt>this</tt>提供一个<b>context（上下文）</b>值：<tt>model.on('change', this.render, this)</tt> （愚人码头注：即回调函数中的This，指向传递的第三个参数）。
     </p>
 
-    <p>
-      Callbacks bound to the special
-      <tt>"all"</tt> event will be triggered when any event occurs, and are passed
-      the name of the event as the first argument. For example, to proxy all events
-      from one object to another:
+    <p>当回调函数被绑定到特殊"all"事件时，任何事件的发生都会触发该回调函数，回调函数的第一个参数会传递该事件的名称。举个例子，将一个对象的所有事件代理到另一对象：
     </p>
 
 <pre>
@@ -889,8 +690,8 @@ proxy.on("all", function(eventName) {
 </pre>
 
     <p>
-      All Backbone event methods also support an event map syntax, as an alternative
-      to positional arguments:
+        所有Backbone事件方法还支持事件映射的语法，
+        作为可惜的位置参数：
     </p>
 
 <pre>
@@ -902,14 +703,10 @@ book.on({
 </pre>
 
     <p id="Events-off">
-      <b class="header">off</b><code>object.off([event], [callback], [context])</code><span class="alias">Alias: unbind</span>
+      <b class="header">off</b><code>object.off([event], [callback], [context])</code><span class="alias">别名: unbi
+        nd</span>
       <br />
-      Remove a previously-bound <b>callback</b> function from an object. If no
-      <b>context</b> is specified, all of the versions of the callback with
-      different contexts will be removed. If no
-      callback is specified, all callbacks for the <b>event</b> will be
-      removed. If no event is specified, callbacks for <i>all</i> events
-      will be removed.
+        从 object 对象移除先前绑定的 <b>callback</b> 函数。如果没有指定<b>context（上下文）</b>，所有上下文下的这个回调函数将被移除。如果没有指定callback，所有绑定这个事件回调函数将被移除；如果没有指定event，所有事件的回调函数会被移除。
     </p>
 
 <pre>
@@ -929,35 +726,26 @@ object.off(null, null, context);
 object.off();
 </pre>
 
-    <p>
-      Note that calling <tt>model.off()</tt>, for example, will indeed remove <i>all</i> events
-      on the model &mdash; including events that Backbone uses for internal bookkeeping.
+    <p>需要注意的是，调用 <tt>model.off()</tt>，例如，这确实会删除model（模型）上<i>所有</i>的事件&mdash;包括Backbone内部用来统计的事件。
     </p>
 
     <p id="Events-trigger">
       <b class="header">trigger</b><code>object.trigger(event, [*args])</code>
       <br />
-      Trigger callbacks for the given <b>event</b>, or space-delimited list of events.
-      Subsequent arguments to <b>trigger</b> will be passed along to the
-      event callbacks.
+        触发给定 <b>event</b>或用空格隔开的事件的回调函数。后续传入  <b>trigger</b> 的参数会传递到触发事件的回调函数里。
     </p>
 
     <p id="Events-once">
       <b class="header">once</b><code>object.once(event, callback, [context])</code>
       <br />
-      Just like <a href="#Events-on">on</a>, but causes the bound callback to fire
-      only once before being removed. Handy for saying "the next time that X happens, do this".
+        用法跟<a href="#Events-on">on</a>很像，区别在于绑定的回调函数触发一次后就会被移除（愚人码头注：只执行一次）。简单的说就是“下次不在触发了，用这个方法”。
     </p>
 
     <p id="Events-listenTo">
       <b class="header">listenTo</b><code>object.listenTo(other, event, callback)</code>
       <br />
-      Tell an <b>object</b> to listen to a particular event on an <b>other</b>
-      object.  The advantage of using this form, instead of <tt>other.on(event,
-      callback, object)</tt>, is that <b>listenTo</b> allows the <b>object</b>
-      to keep track of the events, and they can be removed all at once later
-      on.  The <b>callback</b> will always be called with <b>object</b> as
-      context.
+        让 <b>object</b> 监听 <b>另一个（other）</b>对象上的一个特定事件。不使用<tt>other.on(event,
+              callback, object)</tt>，而使用这种形式的优点是：<b>listenTo</b>允许 <b>object</b>来跟踪这个特定事件，并且以后可以一次性全部移除它们。<b>callback</b>总是在<b>object</b>上下文环境中被调用。
     </p>
 
 <pre>
@@ -967,11 +755,7 @@ view.listenTo(model, 'change', view.render);
     <p id="Events-stopListening">
       <b class="header">stopListening</b><code>object.stopListening([other], [event], [callback])</code>
       <br />
-      Tell an <b>object</b> to stop listening to events. Either call
-      <b>stopListening</b> with no arguments to have the <b>object</b> remove
-      all of its <a href="#Events-listenTo">registered</a> callbacks ... or be more
-      precise by telling it to remove just the events it's listening to on a
-      specific object, or a specific event, or just a specific callback.
+        让 <b>object</b> 停止监听事件。如果调用不带参数的<b>stopListening</b>，可以移除 <b>object</b> 下所有已经<a href="#Events-listenTo">registered(注册)</a>的callback函数...，或者只删除指定对象上明确告知的监听事件，或者一个删除指定事件，或者只删除指定的回调函数。
     </p>
 
 <pre>
@@ -983,63 +767,59 @@ view.stopListening(model);
     <p id="Events-listenToOnce">
       <b class="header">listenToOnce</b><code>object.listenToOnce(other, event, callback)</code>
       <br />
-      Just like <a href="#Events-listenTo">listenTo</a>, but causes the bound
-      callback to fire only once before being removed.
+        用法跟 <a href="#Events-listenTo">listenTo</a> 很像，但是事件触发一次后callback将被移除。
+
     </p>
 
     <p id="Events-catalog">
-      <b class="header">Catalog of Events</b>
+      <b class="header">Catalog of Events（事件目录）</b>
       <br />
-      Here's the complete list of built-in Backbone events, with arguments.
-      You're also free to trigger your own events on Models, Collections and
-      Views as you see fit. The <tt>Backbone</tt> object itself mixes in <tt>Events</tt>,
-      and can be used to emit any global events that your application needs.
+        
+        下面是Backbone 内置事件的完整列表，带有参数。
+        你也可以在Models（模型），Collection（集合），Views（视图）上自由地触发这些事件，只要你认为合适。
+        收藏和意见，你认为合适。
+        <tt>Backbone</tt> 对象本身混入了<tt>Events</tt>，并且可用于触发任何全局事件，只要您的应用程序的需要。
     </p>
 
     <ul class="small">
-      <li><b>"add"</b> (model, collection, options) &mdash; when a model is added to a collection. </li>
-      <li><b>"remove"</b> (model, collection, options) &mdash; when a model is removed from a collection. </li>
-      <li><b>"reset"</b> (collection, options) &mdash; when the collection's entire contents have been replaced. </li>
-      <li><b>"sort"</b> (collection, options) &mdash; when the collection has been re-sorted. </li>
-      <li><b>"change"</b> (model, options) &mdash; when a model's attributes have changed. </li>
-      <li><b>"change:[attribute]"</b> (model, value, options) &mdash; when a specific attribute has been updated. </li>
-      <li><b>"destroy"</b> (model, collection, options) &mdash; when a model is <a href="#Model-destroy">destroyed</a>. </li>
-      <li><b>"request"</b> (model_or_collection, xhr, options) &mdash; when a model or collection has started a request to the server. </li>
-      <li><b>"sync"</b> (model_or_collection, resp, options) &mdash; when a model or collection has been successfully synced with the server.</li>
-      <li><b>"error"</b> (model_or_collection, resp, options) &mdash; when a model's or collection's request to the server has failed. </li>
-      <li><b>"invalid"</b> (model, error, options) &mdash; when a model's <a href="#Model-validate">validation</a> fails on the client. </li>
-      <li><b>"route:[name]"</b> (params) &mdash; Fired by the router when a specific route is matched.</li>
-      <li><b>"route"</b> (route, params) &mdash; Fired by the router when <i>any</i> route has been matched.</li>
-      <li><b>"route"</b> (router, route, params) &mdash; Fired by history when <i>any</i> route has been matched.</li>
-      <li><b>"all"</b> &mdash; this special event fires for <i>any</i> triggered event, passing the event name as the first argument. </li>
+      <li><b>"add"</b> (model, collection, options) &mdash; 当一个model（模型）被添加到一个collection（集合）时触发。 </li>
+      <li><b>"remove"</b> (model, collection, options) &mdash; 当一个model（模型）从一个collection（集合）中被删除时触发。</li>
+      <li><b>"reset"</b> (collection, options) &mdash; 当该collection（集合）的全部内容已被替换时触发。</li>
+      <li><b>"sort"</b> (collection, options) &mdash; 当该collection（集合）已被重新排序时触发。 </li>
+      <li><b>"change"</b> (model, options) &mdash; 当一个model（模型）的属性改变时触发。 </li>
+      <li><b>"change:[attribute]"</b> (model, value, options) &mdash; 当一个model（模型）的某个特定属性被更新时触发。 </li>
+      <li><b>"destroy"</b> (model, collection, options) &mdash;当一个model（模型）被<a href="#Model-destroy">destroyed（销毁）</a>时触发。</li>
+      <li><b>"request"</b> (model_or_collection, xhr, options) &mdash; 当一个model（模型）或collection（集合）开始发送请求到服务器时触发。</li>
+      <li><b>"sync"</b> (model_or_collection, resp, options) &mdash; 当一个model（模型）或collection（集合）成功同步到服务器时触发。</li>
+      <li><b>"error"</b> (model_or_collection, resp, options) &mdash; 当一个model（模型）或collection（集合）的请求远程服务器失败时触发。</li>
+      <li><b>"invalid"</b> (model, error, options) &mdash;
+          当model（模型）在客户端 <a href="#Model-validate">validation（验证）</a>失败时触发。 </li>
+      <li><b>"route:[name]"</b> (params) &mdash; 
+           当一个特定route（路由）相匹配时通过路由器触发。</li>
+      <li><b>"route"</b> (route, params) &mdash; 
+          当<i>任何一个</i>route（路由）相匹配时通过路由器触发。</li>
+      <li><b>"route"</b> (router, route, params) &mdash; 
+          当<i>任何一个</i>route（路由）相匹配时通过history（历史记录）触发。</li>
+      <li><b>"all"</b> &mdash; 所有事件发生都能触发这个特别的事件，第一个参数是触发事件的名称。</li>
     </ul>
 
     <p>
-      Generally speaking, when calling a function that emits an event
-      (<tt>model.set</tt>, <tt>collection.add</tt>, and so on...),
-      if you'd like to prevent the event from being triggered, you may pass
-      <tt>{silent: true}</tt> as an option. Note that this is <i>rarely</i>,
-      perhaps even never, a good idea. Passing through a specific flag
-      in the options for your event callback to look at, and choose to ignore,
-      will usually work out better.
+        一般来说，事件触发（例如model.set，collection.add或者其他事件）后就会执行回调函数，但是如果你想阻止回调函数的执行，你可以传递{silent: true}作为参数。很多时候，这是一个好的方法。通过在回调函数里传输一个特定的判断参数，会让你的程序更加出色。
+        
+        一般而言，事件触发（<tt>model.set</tt>, <tt>collection.add</tt>,等等...）后就会调用一个函数，但是如果你想阻止事件被触发，
+        您可以传递<tt>{silent: true}</tt>作为一个选项。注意，这中情况很少，
+        甚至从来没有，
+        一个好主意。 通过在选项中传递一个特定的标记，回调函数里传输一个特定的判断参数 并且选择忽略，会让你的程序更加出色。
+
     </p>
 
-    <h2 id="Model">Backbone.Model</h2>
+    <h2 id="Model">Backbone.Model（模型）</h2>
 
     <p>
-      <b>Models</b> are the heart of any JavaScript application, containing
-      the interactive data as well as a large part of the logic surrounding it:
-      conversions, validations, computed properties, and access control. You
-      extend <b>Backbone.Model</b> with your domain-specific methods, and
-      <b>Model</b> provides a basic set of functionality for managing changes.
+        <b>Models（模型）</b>是任何Javascript应用的核心，包括数据交互及与其相关的大量逻辑： 转换、验证、计算属性和访问控制。你可以用特定的方法扩展 <b>Backbone.Model</b>，<b>Model</b> 也提供了一组基本的管理变化的功能。
     </p>
 
-    <p>
-      The following is a contrived example, but it demonstrates defining a model
-      with a custom method, setting an attribute, and firing an event keyed
-      to changes in that specific attribute.
-      After running this code once, <tt>sidebar</tt> will be
-      available in your browser's console, so you can play around with it.
+    <p> 下面的示例演示了如何定义一个模型，包括自定义方法、设置属性、以及触发该属性变化的事件。一旦运行此代码后，<tt>sidebar</tt>在浏览器的控制台就可用，这样你就可以充分发挥了。
     </p>
 
 <pre class="runnable">
@@ -1064,14 +844,10 @@ sidebar.promptColor();
     <p id="Model-extend">
       <b class="header">extend</b><code>Backbone.Model.extend(properties, [classProperties])</code>
       <br />
-      To create a <b>Model</b> class of your own, you extend <b>Backbone.Model</b>
-      and provide instance <b>properties</b>, as well as optional
-      <b>classProperties</b> to be attached directly to the constructor function.
+        要创建自己的 <b>Model</b> 类，你可以扩展 <b>Backbone.Model</b> 并提供实例 <b>properties(属性) </b>， 以及可选的可以直接注册到构造函数的<b>classProperties(类属性)</b>。
     </p>
 
-    <p>
-      <b>extend</b> correctly sets up the prototype chain, so subclasses created
-      with <b>extend</b> can be further extended and subclassed as far as you like.
+    <p><b>extend</b> 可以正确的设置原型链，因此通过 <b>extend</b> 创建的子类 (subclasses) 也可以被深度扩展。
     </p>
 
 <pre>
@@ -1099,11 +875,7 @@ var PrivateNote = Note.extend({
 </pre>
 
     <p class="warning">
-        Brief aside on <tt>super</tt>: JavaScript does not provide
-        a simple way to call super &mdash; the function of the same name defined
-        higher on the prototype chain. If you override a core function like
-        <tt>set</tt>, or <tt>save</tt>, and you want to invoke the
-        parent object's implementation, you'll have to explicitly call it, along these lines:
+        父类（<tt>super</tt>） 的简述：Javascript没有提供一种直接调用父类的方式 &mdash; 如果你要重载原型链中上层定义的同名函数，如 <tt>set</tt>, 或 <tt>save</tt> ， 并且你想调用父对象的实现，这时需要明确的调用它，类似这样：
     </p>
 
 <pre>
@@ -1118,10 +890,7 @@ var Note = Backbone.Model.extend({
     <p id="Model-constructor">
       <b class="header">constructor / initialize</b><code>new Model([attributes], [options])</code>
       <br />
-      When creating an instance of a model, you can pass in the initial values
-      of the <b>attributes</b>, which will be <a href="#Model-set">set</a> on the
-      model. If you define an <b>initialize</b> function, it will be invoked when
-      the model is created.
+        当创建model实例时，可以传入 属性 (<b>attributes</b>)初始值，这些值会被 <a href="#Model-set">set</a> （设置）到 model。 如果定义了 <b>initialize</b> 函数，该函数会在model创建后执行。
     </p>
 
 <pre>
@@ -1131,10 +900,8 @@ new Book({
 });
 </pre>
 
-    <p>
-      In rare cases, if you're looking to get fancy,
-      you may want to override <b>constructor</b>, which allows
-      you to replace the actual constructor function for your model.
+    <p>在极少数的情况下，你可能需要去重写 <b>constructor</b> ，它可以让你替换你的model的实际构造函数。
+
     </p>
 
 <pre>
@@ -1151,36 +918,25 @@ var Library = Backbone.Model.extend({
 </pre>
 
     <p>
-      If you pass a <tt>{collection: ...}</tt> as the <b>options</b>, the model
-      gains a <tt>collection</tt> property that will be used to indicate which
-      collection the model belongs to, and is used to help compute the model's
-      <a href="#Model-url">url</a>. The <tt>model.collection</tt> property is
-      normally created automatically when you first add a model to a collection.
-      Note that the reverse is not true, as passing this option to the constructor
-      will not automatically add the model to the collection. Useful, sometimes.
+        如果你传入<tt>{collection: ...}</tt> ，这个 <b>options</b>表示这个model属于哪个<tt>collection</tt>，且用于计算这个model的<a href="#Model-url">url</a>。否则<tt>model.collection</tt> 这个属性会在你第一次添加model到一个collection的时候被自动添加。
+        需要注意的是相反的是不正确的，因为传递这个选项给构造函数将不会自动添加model到集合。有时这个是很有用的。
     </p>
 
     <p>
-      If <tt>{parse: true}</tt> is passed as an <b>option</b>, the <b>attributes</b>
-      will first be converted by <a href="#Model-parse">parse</a> before being
-      <a href="#Model-set">set</a> on the model.
+        如果<tt>{parse: true}</tt>被作为一个<b>option</b>选项传递， <b>attributes</b>将在 <a href="#Model-set">set</a>到model之前首先通过<a href="#Model-parse">parse</a>被转换。
     </p>
 
     <p id="Model-get">
       <b class="header">get</b><code>model.get(attribute)</code>
       <br />
-      Get the current value of an attribute from the model. For example:
+        从当前model中获取当前属性(attributes)值，比如：
       <tt>note.get("title")</tt>
     </p>
 
     <p id="Model-set">
       <b class="header">set</b><code>model.set(attributes, [options])</code>
       <br />
-      Set a hash of attributes (one or many) on the model. If any of the attributes
-      change the model's state, a <tt>"change"</tt> event will be triggered on the model.
-      Change events for specific attributes are also triggered, and you can bind
-      to those as well, for example: <tt>change:title</tt>, and <tt>change:content</tt>.
-      You may also pass individual keys and values.
+        向model设置一个或多个hash属性(attributes)。如果任何一个属性改变了model的状态，在不传入 {silent: true} 选项参数的情况下，会触发 <tt>"change"</tt> 事件，更改特定属性的事件也会触发。 可以绑定事件到某个属性，例如：<tt>change:title</tt>，及 <tt>change:content</tt>。
     </p>
 
 <pre>
@@ -1192,10 +948,7 @@ book.set("title", "A Scandal in Bohemia");
     <p id="Model-escape">
       <b class="header">escape</b><code>model.escape(attribute)</code>
       <br />
-      Similar to <a href="#Model-get">get</a>, but returns the HTML-escaped version
-      of a model's attribute. If you're interpolating data from the model into
-      HTML, using <b>escape</b> to retrieve attributes will prevent
-      <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">XSS</a> attacks.
+        与 <a href="#Model-get">get</a> 类似，只是返回的是HTML转义后版本的model属性值。如果从model插入数据到HTML，使用 escape 取数据可以避免 <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">XSS</a> 攻击。
     </p>
 
 <pre class="runnable">
@@ -1209,8 +962,7 @@ alert(hacker.escape('name'));
     <p id="Model-has">
       <b class="header">has</b><code>model.has(attribute)</code>
       <br />
-      Returns <tt>true</tt> if the attribute is set to a non-null or non-undefined
-      value.
+        属性值为非 null 或非 undefined 时返回  <tt>true</tt>。
     </p>
 
 <pre>
@@ -1222,34 +974,25 @@ if (note.has("title")) {
     <p id="Model-unset">
       <b class="header">unset</b><code>model.unset(attribute, [options])</code>
       <br />
-      Remove an attribute by deleting it from the internal attributes hash.
-      Fires a <tt>"change"</tt> event unless <tt>silent</tt> is passed as an option.
+        从内部属性散列表中删除指定属性(attribute)。 如果未设置 <tt>silent</tt> 选项，会触发 <tt>"change"</tt> 事件。
     </p>
 
     <p id="Model-clear">
       <b class="header">clear</b><code>model.clear([options])</code>
       <br />
-      Removes all attributes from the model, including the <tt>id</tt> attribute. Fires a <tt>"change"</tt> event unless
-      <tt>silent</tt> is passed as an option.
+        从model中删除所有属性， 包括<tt>id</tt>属性。 如果未设置 <tt>silent</tt> 选项，会触发 <tt>"change"</tt> 事件。
     </p>
 
     <p id="Model-id">
       <b class="header">id</b><code>model.id</code>
       <br />
-      A special property of models, the <b>id</b> is an arbitrary string
-      (integer id or UUID). If you set the <b>id</b> in the
-      attributes hash, it will be copied onto the model as a direct property.
-      Models can be retrieved by id from collections, and the id is used to generate
-      model URLs by default.
+        id是model的特殊属性，可以是任意字符串（整型 <b>id</b> 或 UUID）。在属性中设置的  <b>id</b> 会被直接拷贝到model属性上。 我们可以从集合（collections）中通过 id 获取model，另外 id 通常用于生成model的 URLs。
     </p>
 
     <p id="Model-idAttribute">
       <b class="header">idAttribute</b><code>model.idAttribute</code>
       <br />
-      A model's unique identifier is stored under the <tt>id</tt> attribute.
-      If you're directly communicating with a backend (CouchDB, MongoDB) that uses
-      a different unique key, you may set a Model's <tt>idAttribute</tt> to
-      transparently map from that key to <tt>id</tt>.
+        一个model的唯一标示符，被储存在 <tt>id</tt> 属性下。如果使用一个不同的唯一的key直接和后端通信。可以设置Model的 <tt>idAttribute</tt> 到一个从key到 <tt>id</tt> 的一个透明映射中。 </p>
 
 <pre class="runnable">
 var Meal = Backbone.Model.extend({
@@ -1259,55 +1002,42 @@ var Meal = Backbone.Model.extend({
 var cake = new Meal({ _id: 1, name: "Cake" });
 alert("Cake id: " + cake.id);
 </pre>
-    </p>
+
 
     <p id="Model-cid">
       <b class="header">cid</b><code>model.cid</code>
       <br />
-      A special property of models, the <b>cid</b> or client id is a unique identifier
-      automatically assigned to all models when they're first created. Client ids
-      are handy when the model has not yet been saved to the server, and does not
-      yet have its eventual true <b>id</b>, but already needs to be visible in the UI.
+        model的特殊属性，<b>cid</b> 或客户 id 是当所有model创建时自动产生的唯一标识符。 客户 ids 在model尚未保存到服务器之前便存在，此时model可能仍不具有最终的 <b>id</b>， 但已经需要在用户界面可见。
     </p>
 
     <p id="Model-attributes">
       <b class="header">attributes</b><code>model.attributes</code>
       <br />
-      The <b>attributes</b> property is the internal hash containing the model's
-      state &mdash; usually (but not necessarily) a form of the JSON object
-      representing the model data on the server. It's often a straightforward
-      serialization of a row from the database, but it could also be client-side
-      computed state.
+        <b>attributes</b> 属性是包含模型状态的内部散列表 &mdash; 通常（但不一定）JSON对象的形式表示在服务器上模型数据 。它通常是数据库中一个行的简单的序列，但它也可以是客户端的计算状态。
     </p>
 
-    <p>
-      Please use <a href="#Model-set">set</a> to update the <b>attributes</b>
-      instead of modifying them directly. If you'd like to retrieve and munge a
-      copy of the model's attributes, use <tt>_.clone(model.attributes)</tt>
-      instead.
+    <p> 建议采用 <a href="#Model-set">set</a> 更新 <b>attributes</b>而不要直接修改。  如果您想检索和获取模型属性的副本， 用 <tt>_.clone(model.attributes)</tt> 取而代之。
     </p>
 
     <p class="warning">
-      Due to the fact that <a href="#Events">Events</a> accepts space separated
-      lists of events, attribute names should not include spaces.
+        由于这样的事实：
+        <a href="#Events">Events（事件）</a>接受空格分隔事件列表，
+        但是属性名称不应该包括空格。
     </p>
 
     <p id="Model-changed">
       <b class="header">changed</b><code>model.changed</code>
       <br />
-      The <b>changed</b> property is the internal hash containing all the attributes
-      that have changed since the last <a href="#Model-set">set</a>.
-      Please do not update <b>changed</b> directly since its state is internally maintained
-      by <a href="#Model-set">set</a>.  A copy of <b>changed</b> can be acquired from
-      <a href="#Model-changedAttributes">changedAttributes</a>.
+        <b>changed</b>属性是一个包含所有属性的内部散列，自最后 <a href="#Model-set">set</a> 已改变。
+        自最后一组已改变。
+        请不要直接更新 <b>changed</b>，因为它的状态是由<a href="#Model-set">set</a>内部维护。
+        <b>changed</b>的副本可从<a href="#Model-changedAttributes">changedAttributes</a>获得。
     </p>
 
     <p id="Model-defaults">
       <b class="header">defaults</b><code>model.defaults or model.defaults()</code>
       <br />
-      The <b>defaults</b> hash (or function) can be used to specify the default
-      attributes for your model. When creating an instance of the model,
-      any unspecified attributes will be set to their default value.
+        <b>defaults</b> 散列（或函数）用于为模型指定默认属性。 创建模型实例时，任何未指定的属性会被设置为其默认值。
     </p>
 
 <pre class="runnable">
@@ -1323,21 +1053,15 @@ alert("Dessert will be " + (new Meal).get('dessert'));
 </pre>
 
     <p class="warning">
-      Remember that in JavaScript, objects are passed by reference, so if you
-      include an object as a default value, it will be shared among all instances.
-      Instead, define <b>defaults</b> as a function.
+        需要提醒的是，在 Javascript 中，对象是按引用传值的，因此如果包含一个对象作为默认值，它会被所有实例共享。可以定义 <b>defaults</b>为一个函数取代。
     </p>
 
     <p id="Model-toJSON">
       <b class="header">toJSON</b><code>model.toJSON([options])</code>
       <br />
-      Return a shallow copy of the model's <a href="#Model-attributes">attributes</a>
-      for JSON stringification.  This can be used for persistence,
-      serialization, or for augmentation before being sent to the server. The
-      name of this method is a bit confusing, as it doesn't actually return a
-      JSON string &mdash; but I'm afraid that it's the way that the
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON_behavior">JavaScript API for <b>JSON.stringify</b></a>
-      works.
+        返回一个模型的 <a href="#Model-attributes">attributes</a> 浅拷贝副本的 JSON 字符串化形式。 
+        它可用于模型的持久化、序列化，或者发送到服务之前的扩充。 该方法名称比较混乱，因为它事实上并不返回 JSON 字符串，
+        但这是对 <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON_behavior">JavaScript API 的 <b>JSON.stringify</b> </a>实现。
     </p>
 
 <pre class="runnable">
@@ -1354,26 +1078,25 @@ alert(JSON.stringify(artist));
     <p id="Model-sync">
       <b class="header">sync</b><code>model.sync(method, model, [options])</code>
       <br />
-      Uses <a href="#Sync">Backbone.sync</a> to persist the state of a model to
-      the server.  Can be overridden for custom behavior.
+        使用 <a href="#Sync">Backbone.sync</a> 可以将一个模型的状态持续发送到服务器。
+        可以自定义行为覆盖。
     </p>
 
     <p id="Model-fetch">
       <b class="header">fetch</b><code>model.fetch([options])</code>
       <br />
-      Merges the model's state with attributes fetched from the server by
-      delegating to <a href="#Sync">Backbone.sync</a>. Returns a
-      <a href="http://api.jquery.com/jQuery.ajax/#jqXHR">jqXHR</a>.
-      Useful if the model has never
-      been populated with data, or if you'd like to ensure that you have the
-      latest server state. Triggers a <tt>"change"</tt> event if the
-      server's state differs from the current attributes. <tt>fetch</tt> accepts
-      <tt>success</tt> and <tt>error</tt> callbacks in the options hash, which
-      are both passed <tt>(model, response, options)</tt> as arguments.
+        通过委托给<a href="#Sync">Backbone.sync</a>从服务器重置模型的状态。返回<a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/#jqXHR">jqXHR</a>。
+        如果模型从未填充数据时非常有用，
+        或者如果你想确保你有最新的服务器状态。
+        如果服务器的状态不同于当前属性的<tt>"change"</tt>事件将被触发。
+        接受 <tt>success</tt> 和 <tt>error</tt>回调的选项散列，
+        这两个回调都可以传递<tt>(model, response, options)</tt>作为参数。
+        
+
     </p>
 
 <pre>
-// Poll every 10 seconds to keep the channel model up-to-date.
+// 每隔 10 秒从服务器拉取数据以保持频道模型是最新的
 setInterval(function() {
   channel.fetch();
 }, 10000);
@@ -1382,40 +1105,34 @@ setInterval(function() {
     <p id="Model-save">
       <b class="header">save</b><code>model.save([attributes], [options])</code>
       <br />
-      Save a model to your database (or alternative persistence layer),
-      by delegating to <a href="#Sync">Backbone.sync</a>.  Returns a
-      <a href="http://api.jquery.com/jQuery.ajax/#jqXHR">jqXHR</a> if
-      validation is successful and <tt>false</tt> otherwise. The <b>attributes</b>
-      hash (as in <a href="#Model-set">set</a>) should contain the attributes
-      you'd like to change &mdash; keys that aren't mentioned won't be altered &mdash; but,
-      a <i>complete representation</i> of the resource will be sent to the server.
-      As with <tt>set</tt>, you may pass individual keys and values instead of a hash.
-      If the model has a <a href="#Model-validate">validate</a>
-      method, and validation fails, the model will not be saved. If the model
-      <a href="#Model-isNew">isNew</a>, the save will be a <tt>"create"</tt>
-      (HTTP <tt>POST</tt>), if the model already
-      exists on the server, the save will be an <tt>"update"</tt> (HTTP <tt>PUT</tt>).
+
+        通过委托给<a href="#Sync">Backbone.sync</a>，保存模型到数据库（或替代持久化层）。
+        如果验证成功，返回<a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/#jqXHR">jqXHR</a>，否则为 <tt>false</tt>。
+        <b>attributes</b>散列（如<a href="#Model-set">set</a>）应包含你想改变的属性 - 不涉及的键不会被修改 -
+        但是，该资源的一个<i>完整表示</i>将被发送到服务器。
+        至于<tt>set</tt>，你可能会传递单独的键和值，而不是一个哈希值。
+        如果模型有一个<a href="#Model-validate">validate</a>方法，并且验证失败，
+        该模型将不会被保存。
+        如果模型<a href="#Model-isNew">isNew</a>，
+        保存将采用<tt>"create"</tt>（HTTP <tt>POST</tt>），
+        如果模型在服务器上已经存在，
+        保存将采用<tt>"update"</tt>（HTTP <tt>PUT</tt>）。
+    </p>
+
+    <p>相反，如果你只想将<i>改变</i>属性发送到服务器，
+    调用<tt>model.save(attrs, {patch: true})</tt>。
+    你会得到一个HTTP <tt>PATCH</tt>请求将刚刚传入的属性发送到服务器。
     </p>
 
     <p>
-      If instead, you'd only like the <i>changed</i> attributes to be sent to the
-      server, call <tt>model.save(attrs, {patch: true})</tt>. You'll get an HTTP
-      <tt>PATCH</tt> request to the server with just the passed-in attributes.
+        通过新的属性调用<tt>save</tt> 将立即触发一个<tt>"change"</tt>事件，一个<tt>"request"</tt>事件作为Ajax请求开始到服务器，
+        并且当服务器确认成功修改后立即触发 一个<tt>"sync"</tt>事件。
+        如果你想在模型上等待服务器设置新的属性，请传递<tt>{wait: true}</tt>。
     </p>
 
     <p>
-      Calling <tt>save</tt> with new attributes will cause a <tt>"change"</tt>
-      event immediately, a <tt>"request"</tt> event as the Ajax request begins to
-      go to the server, and a <tt>"sync"</tt> event after the server has acknowledged
-      the successful change. Pass <tt>{wait: true}</tt> if you'd like to wait
-      for the server before setting the new attributes on the model.
-    </p>
-
-    <p>
-      In the following example, notice how our overridden version
-      of <tt>Backbone.sync</tt> receives a <tt>"create"</tt> request
-      the first time the model is saved and an <tt>"update"</tt>
-      request the second time.
+        在下面的例子中，
+        注意我们如何覆盖<tt>Backbone.sync</tt>的版本，在模型初次保存时接收到 <tt>"create"</tt>请求，第二次接收到 <tt>"update"</tt> 请求的。
     </p>
 
 <pre class="runnable">
@@ -1434,12 +1151,13 @@ book.save();
 book.save({author: "Teddy"});
 </pre>
 
+
     <p>
-      <b>save</b> accepts <tt>success</tt> and <tt>error</tt> callbacks in the
-      options hash, which will be passed the arguments <tt>(model, response, options)</tt>.
-      If a server-side validation fails, return a non-<tt>200</tt>
-      HTTP response code, along with an error response in text or JSON.
-    </p>
+          <b>save</b> 支持在选项散列表中传入 <tt>success</tt> 和 <tt>error</tt> 回调函数，
+          回调函数支持传入 <tt>(model, response, options)</tt> 作为参数。
+          <!--如果模型拥有 <tt>validate</tt> 方法并且验证失败，<tt>error</tt> 回调函数会执行。-->
+          如果服务端验证失败，返回非 <tt>200</tt> 的 HTTP 响应码，将产生文本或 JSON 的错误内容。
+        </p>
 
 <pre>
 book.save("author", "F.D.R.", {error: function(){ ... }});
@@ -1448,18 +1166,15 @@ book.save("author", "F.D.R.", {error: function(){ ... }});
     <p id="Model-destroy">
       <b class="header">destroy</b><code>model.destroy([options])</code>
       <br />
-      Destroys the model on the server by delegating an HTTP <tt>DELETE</tt>
-      request to <a href="#Sync">Backbone.sync</a>. Returns a
-      <a href="http://api.jquery.com/jQuery.ajax/#jqXHR">jqXHR</a> object, or
-      <tt>false</tt> if the model <a href="#Model-isNew">isNew</a>. Accepts
-      <tt>success</tt> and <tt>error</tt> callbacks in the options hash, which
-      will be passed <tt>(model, response, options)</tt>.
-      Triggers a <tt>"destroy"</tt> event on the model, which will bubble up
-      through any collections that contain it, a <tt>"request"</tt> event as it
-      begins the Ajax request to the server, and a <tt>"sync"</tt> event, after
-      the server has successfully acknowledged the model's deletion. Pass
-      <tt>{wait: true}</tt> if you'd like to wait for the server to respond
-      before removing the model from the collection.
+        通过委托给<a href="#Sync">Backbone.sync</a>，保存模型到数据库（或替代持久化层）。
+        通过委托一个HTTP <tt>DELETE</tt>请求给<a href="#Sync">Backbone.sync</a>破坏服务器上的模型。
+        返回一个<a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/#jqXHR">jqXHR</a>对象， 
+        或者如果模型<a href="#Model-isNew">isNew</a>，那么返回<tt>false</tt>。
+        选项散列表中接受 <tt>success</tt> 和 <tt>error</tt> 回调函数， 回调函数支持传入 <tt>(model, response, options)</tt> 作为参数。
+        
+
+    在模型上触发 <tt>"destroy"</tt> 事件，该事件将会冒泡到任何包含这个模型的集合中， 一个<tt>"request"</tt>事件作为Ajax请求开始到服务器，
+    并且当服务器确认模型被删除后立即触发 一个<tt>"sync"</tt>事件。如果你想在集合中删除这个模型前等待服务器相应，请传递<tt>{wait: true}</tt>。
     </p>
 
 <pre>
@@ -1469,20 +1184,18 @@ book.destroy({success: function(model, response) {
 </pre>
 
     <p id="Model-Underscore-Methods">
-      <b class="header">Underscore Methods (6)</b>
+      <b class="header">Underscore 方法 (6)</b>
       <br />
-      Backbone proxies to <b>Underscore.js</b> to provide 6 object functions
-      on <b>Backbone.Model</b>. They aren't all documented here, but
-      you can take a look at the Underscore documentation for the full details&hellip;
+      Backbone 代理了 <b>Underscore.js</b>用来给<b>Backbone.Model</b>提供 6 个对象函数。这里没有完全记录他们，但你可以看看Underscore文档中全部详情&hellip; (愚人码头注：下面链接已经替换成中文文档的地址)
     </p>
 
     <ul class="small">
-      <li><a href="http://underscorejs.org/#keys">keys</a></li>
-      <li><a href="http://underscorejs.org/#values">values</a></li>
-      <li><a href="http://underscorejs.org/#pairs">pairs</a></li>
-      <li><a href="http://underscorejs.org/#invert">invert</a></li>
-      <li><a href="http://underscorejs.org/#pick">pick</a></li>
-      <li><a href="http://underscorejs.org/#omit">omit</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#keys">keys</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#values">values</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#pairs">pairs</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#invert">invert</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#pick">pick</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#omit">omit</a></li>
     </ul>
 
 <pre>
@@ -1494,23 +1207,23 @@ chapters.keys().join(', ');
     <p id="Model-validate">
       <b class="header">validate</b><code>model.validate(attributes, options)</code>
       <br />
-      This method is left undefined and you're encouraged to override it with
-      any custom validation logic you have that can be performed in JavaScript.
-      By default <tt>save</tt> checks <b>validate</b> before
-      setting any attributes but you may also tell <tt>set</tt> to validate
-      the new attributes by passing <tt>{validate: true}</tt> as an option.
-      <br />
-      The <b>validate</b> method receives the model attributes as well as any
-      options passed to <tt>set</tt> or <tt>save</tt>.
-      If the attributes are valid, don't return anything from <b>validate</b>;
-      if they are invalid return an error of your choosing. It
-      can be as simple as a string error message to be displayed, or a complete
-      error object that describes the error programmatically. If <b>validate</b>
-      returns an error, <tt>save</tt> will not continue, and the
-      model attributes will not be modified on the server.
-      Failed validations trigger an <tt>"invalid"</tt> event, and set the
-      <tt>validationError</tt> property on the model with the value returned by
-      this method.
+      
+        这种方法是未定义的， 如果您有任何可以在JavaScript中执行的代码
+        并且我们鼓励你用你自定义验证逻辑覆盖它 。
+        默认情况下<b>validate</b>在<tt>save</tt>之前调用，
+        但如果传递了 <tt>{validate:true}</tt>，也可以在<tt>set</tt>之前调用。
+        <b>validate</b>方法是通过模型的属性，
+         选项和<tt>set</tt> 和 <tt>save</tt>是一样的。
+        如果属性是有效的， <b>validate</b>不返回验证任何东西;
+         如果它们是无效的， 返回一个你选择的错误。
+        它可以是一个用来显示的简单的字符串错误信息，
+        或一个以编程方式描述错误的完整错误对象。
+
+        如果<b>validate</b>返回一个错误，
+        <tt>save</tt>不会继续，
+       并且在服务器上该模型的属性将不被修改。
+        校验失败将触发<tt>"invalid"</tt>事件，
+        并用此方法返回的值设置模型上的<tt>validationError</tt>属性。
     </p>
 
 <pre class="runnable">
@@ -1537,20 +1250,20 @@ one.save({
 </pre>
 
     <p>
-      <tt>"invalid"</tt> events are useful for providing coarse-grained error
-      messages at the model or collection level.
+        <tt>"invalid"</tt>事件提供粗粒度的错误信息 在模型或集合层面上是很有用。
+
     </p>
 
     <p id="Model-validationError">
       <b class="header">validationError</b><code>model.validationError</code>
       <br />
-      The value returned by <a href="#Model-validate">validate</a> during the last failed validation.
+        用<a href="#Model-validate">validate</a>最后验证失败时返回的值。
     </p>
 
     <p id="Model-isValid">
       <b class="header">isValid</b><code>model.isValid()</code>
       <br />
-      Run <a href="#Model-validate">validate</a> to check the model state.
+        运行<a href="#Model-validate">validate</a>来检查模型状态。
     </p>
 
 <pre class="runnable">
@@ -1575,34 +1288,30 @@ if (!one.isValid()) {
   alert(one.get("title") + " " + one.validationError);
 }
 </pre>
-
+    
     <p id="Model-url">
       <b class="header">url</b><code>model.url()</code>
       <br />
-      Returns the relative URL where the model's resource would be located on
-      the server. If your models are located somewhere else, override this method
-      with the correct logic. Generates URLs of the form: <tt>"[collection.url]/[id]"</tt>
-      by default, but you may override by specifying an explicit <tt>urlRoot</tt>
-      if the model's collection shouldn't be taken into account.
+        
+        返回模型资源在服务器上位置的相对 URL 。
+                  如果模型放在其它地方，可通过合理的逻辑重载该方法。
+                  生成 URLs 的默认形式为：<tt>"/[collection.url]/[id]"</tt>，
+                  如果模型不是集合的一部分，你可以通过指定明确的<tt>urlRoot</tt>覆盖。
     </p>
 
     <p>
-      Delegates to <a href="#Collection-url">Collection#url</a> to generate the
-      URL, so make sure that you have it defined, or a <a href="#Model-urlRoot">urlRoot</a>
-      property, if all models of this class share a common root URL.
-      A model with an id of <tt>101</tt>, stored in a
-      <a href="#Collection">Backbone.Collection</a> with a <tt>url</tt> of <tt>"/documents/7/notes"</tt>,
-      would have this URL: <tt>"/documents/7/notes/101"</tt>
-    </p>
+          由于是委托到 <a href="#Collection-url">Collection#url</a> 来生成 URL，
+          所以首先需要确认它是否定义过，或者所有模型共享一个通用根 URL 时，是否存在 <a href="#Model-urlRoot">urlRoot</a> 属性。
+          例如，一个 id 为 <tt>101</tt> 的模型，存储在
+          <tt>url</tt> 为 <tt>"/documents/7/notes"</tt> 的 <a href="#Collection">Backbone.Collection</a> 中，
+          那么该模型的 URL 为：<tt>"/documents/7/notes/101"</tt>
+        </p>
 
     <p id="Model-urlRoot">
       <b class="header">urlRoot</b><code>model.urlRoot or model.urlRoot()</code>
       <br />
-      Specify a <tt>urlRoot</tt> if you're using a model <i>outside</i> of a collection,
-      to enable the default <a href="#Model-url">url</a> function to generate
-      URLs based on the model id. <tt>"[urlRoot]/id"</tt><br />
-      Normally, you won't need to define this.
-      Note that <tt>urlRoot</tt> may also be a function.
+        如果使用的集合<i>外部</i>的模型，通过指定 <tt>urlRoot</tt> 来设置生成基于模型 id 的 URLs 的默认 <a href="#Model-url">url</a> 函数。 <tt>"[urlRoot]/id"</tt>。通常情况下，你不会需要定义这一点。
+        需要注意的是<tt>urlRoot</tt>也可以是一个函数。
     </p>
 
 <pre class="runnable">
@@ -1612,25 +1321,22 @@ var solaris = new Book({id: "1083-lem-solaris"});
 
 alert(solaris.url());
 </pre>
-
+   
     <p id="Model-parse">
       <b class="header">parse</b><code>model.parse(response, options)</code>
       <br />
-      <b>parse</b> is called whenever a model's data is returned by the
-      server, in <a href="#Model-fetch">fetch</a>, and <a href="#Model-save">save</a>.
-      The function is passed the raw <tt>response</tt> object, and should return
-      the attributes hash to be <a href="#Model-set">set</a> on the model. The
-      default implementation is a no-op, simply passing through the JSON response.
-      Override this if you need to work with a preexisting API, or better namespace
-      your responses.
+        
+        <b>parse</b> 会在通过 <a href="#Model-fetch">fetch</a> 从服务器返回模型数据，以及 <a href="#Model-save">save</a> 时执行。
+                  传入本函数的为原始 <tt>response</tt> 对象，并且应当返回可以 <a href="#Model-set">set</a> 到模型的属性散列表。
+                  默认实现是自动进行的，仅简单传入 JSON 响应。
+                  如果需要使用已存在的 API，或者更好的命名空间响应，可以重载它。
     </p>
 
     <p>
-      If you're working with a Rails backend that has a version prior to 3.1,
-      you'll notice that its default <tt>to_json</tt> implementation includes
-      a model's attributes under a namespace. To disable this behavior for
-      seamless Backbone integration, set:
-    </p>
+          如果使用的3.1版本之前的 Rails 后端，需要注意 Rails's 默认的 <tt>to_json</tt> 实现已经包含了命名空间之下的模型属性。
+          对于无缝的后端集成环境禁用这种行为：
+        </p>
+
 
 <pre>
 ActiveRecord::Base.include_root_in_json = false
@@ -1639,26 +1345,23 @@ ActiveRecord::Base.include_root_in_json = false
     <p id="Model-clone">
       <b class="header">clone</b><code>model.clone()</code>
       <br />
-      Returns a new instance of the model with identical attributes.
+        返回该模型的具有相同属性的新实例。
     </p>
 
     <p id="Model-isNew">
       <b class="header">isNew</b><code>model.isNew()</code>
       <br />
-      Has this model been saved to the server yet? If the model does not yet have
-      an <tt>id</tt>, it is considered to be new.
+        模型是否已经保存到服务器。 如果模型尚无 <tt>id</tt>，则被视为新的。
     </p>
 
     <p id="Model-hasChanged">
       <b class="header">hasChanged</b><code>model.hasChanged([attribute])</code>
       <br />
-      Has the model changed since the last <a href="#Model-set">set</a>? If an <b>attribute</b>
-      is passed, returns <tt>true</tt> if that specific attribute has changed.
+        标识模型从上次 <a href="#Model-set">set</a> 事件发生后是否改变过。 如果传入 <b>attribute</b> ，当指定属性改变后返回 <tt>true</tt>。
     </p>
 
     <p class="warning">
-      Note that this method, and the following change-related ones,
-      are only useful during the course of a <tt>"change"</tt> event.
+        注意，本方法以及接下来 change 相关的方法，仅对 <tt>"change"</tt>事件发生有效。
     </p>
 
 <pre>
@@ -1672,19 +1375,19 @@ book.on("change", function() {
     <p id="Model-changedAttributes">
       <b class="header">changedAttributes</b><code>model.changedAttributes([attributes])</code>
       <br />
-      Retrieve a hash of only the model's attributes that have changed since the last
-      <a href="#Model-set">set</a>, or <tt>false</tt> if there are none. Optionally, an external
-      <b>attributes</b> hash can be passed in, returning the attributes in that
-      hash which differ from the model. This can be used to figure out which
-      portions of a view should be updated, or what calls
-      need to be made to sync the changes to the server.
+        
+        只从最后一次<a href="#Model-set">set</a>开始检索已改变的模型属性散列（hash），
+         或者如果没有，返回 <tt>false</tt>。 作为可选，可以传递外部属性哈希（hash），
+        返回与该模型不同的属性的哈希（hash）。
+        这可以用来找出视图的哪些部分应该更新，或者确定哪些需要与服务器进行同步。
+
     </p>
 
     <p id="Model-previous">
       <b class="header">previous</b><code>model.previous(attribute)</code>
       <br />
-      During a <tt>"change"</tt> event, this method can be used to get the
-      previous value of a changed attribute.
+
+        在 <tt>"change"</tt> 事件发生的过程中，本方法可被用于获取已改变属性的旧值。
     </p>
 
 <pre class="runnable">
@@ -1702,45 +1405,30 @@ bill.set({name : "Bill Jones"});
     <p id="Model-previousAttributes">
       <b class="header">previousAttributes</b><code>model.previousAttributes()</code>
       <br />
-      Return a copy of the model's previous attributes. Useful for getting a
-      diff between versions of a model, or getting back to a valid state after
-      an error occurs.
+        返回模型的上一个属性的副本。一般用于获取模型的不同版本之间的区别，或者当发生错误时回滚模型状态。
     </p>
 
-    <h2 id="Collection">Backbone.Collection</h2>
+    <h2 id="Collection">Backbone.Collection（集合）</h2>
 
     <p>
-      Collections are ordered sets of models. You can bind <tt>"change"</tt> events
-      to be notified when any model in the collection has been modified,
-      listen for <tt>"add"</tt> and <tt>"remove"</tt> events, <tt>fetch</tt>
-      the collection from the server, and use a full suite of
-      <a href="#Collection-Underscore-Methods">Underscore.js methods</a>.
+        集合是模型的有序组合，我们可以在集合上绑定 <tt>"change"</tt> 事件，从而当集合中的模型发生变化时<tt>fetch</tt>（获得）通知，集合也可以监听 <tt>"add"</tt> 和 <tt>"remove"</tt> 事件， 从服务器更新，并能使用 <a href="#Collection-Underscore-Methods">Underscore.js</a> 提供的方法。
     </p>
 
-    <p>
-      Any event that is triggered on a model in a collection will also be
-      triggered on the collection directly, for convenience.
-      This allows you to listen for changes to specific attributes in any
-      model in a collection, for example:
+    <p> 集合中的模型触发的任何事件都可以在集合身上直接触发，所以我们可以监听集合中模型的变化：
       <tt>documents.on("change:selected", ...)</tt>
     </p>
 
+    
     <p id="Collection-extend">
       <b class="header">extend</b><code>Backbone.Collection.extend(properties, [classProperties])</code>
       <br />
-      To create a <b>Collection</b> class of your own, extend <b>Backbone.Collection</b>,
-      providing instance <b>properties</b>, as well as optional <b>classProperties</b> to be attached
-      directly to the collection's constructor function.
+        通过扩展 <b>Backbone.Collection</b> 创建一个 <b>Collection</b> 类。实例属性参数 <b>properties</b> 以及 类属性参数 <b>classProperties</b> 会被直接注册到集合的构造函数。
     </p>
 
     <p id="Collection-model">
       <b class="header">model</b><code>collection.model</code>
       <br />
-      Override this property to specify the model class that the collection
-      contains. If defined, you can pass raw attributes objects (and arrays) to
-      <a href="#Collection-add">add</a>, <a href="#Collection-create">create</a>,
-      and <a href="#Collection-reset">reset</a>, and the attributes will be
-      converted into a model of the proper type.
+        覆盖此属性来指定集合中包含的模型类。可以传入原始属性对象（和数组）来 <a href="#Collection-add">add</a>, <a href="#Collection-create">create</a>,和 <a href="#Collection-reset">reset</a>，传入的属性会被自动转换为适合的模型类型。
     </p>
 
 <pre>
@@ -1750,8 +1438,7 @@ var Library = Backbone.Collection.extend({
 </pre>
 
     <p>
-      A collection can also contain polymorphic models by overriding this property
-      with a constructor that returns a model.
+        集合也可以包含多态模型，通过用构造函数重写这个属性，返回一个模型。
     </p>
 
 <pre>
@@ -1771,14 +1458,12 @@ var Library = Backbone.Collection.extend({
     <p id="Collection-constructor">
       <b class="header">constructor / initialize</b><code>new Backbone.Collection([models], [options])</code>
       <br />
-      When creating a Collection, you may choose to pass in the initial array
-      of <b>models</b>.  The collection's <a href="#Collection-comparator">comparator</a>
-      may be included as an option. Passing <tt>false</tt> as the
-      comparator option will prevent sorting. If you define an
-      <b>initialize</b> function, it will be invoked when the collection is
-      created. There are a couple of options that, if provided, are attached to
-      the collection directly: <tt>model</tt> and <tt>comparator</tt>.<br />
-      Pass <tt>null</tt> for <tt>models</tt> to create an empty Collection with <tt>options</tt>.
+        当创建集合时，你可以选择传入初始的 <b>models</b> 数组。
+        集合的 <a href="#Collection-comparator">comparator</a> 函数也可以作为选项传入。
+        传递<tt>false</tt>作为comparator选项将阻止排序。
+        如果定义了 <b>initialize</b> 函数，会在集合创建时被调用。 有几个选项，
+        如果提供的话，将直接附加到集合上：<tt>model</tt> 和 <tt>comparator</tt>。<br />
+        通过传递<tt>null</tt>给<tt>models</tt>选项来创建一个空的集合。
     </p>
 
 <pre>
@@ -1791,21 +1476,15 @@ var spaces = new Backbone.Collection([], {
     <p id="Collection-models">
       <b class="header">models</b><code>collection.models</code>
       <br />
-      Raw access to the JavaScript array of models inside of the collection. Usually you'll
-      want to use <tt>get</tt>, <tt>at</tt>, or the <b>Underscore methods</b>
-      to access model objects, but occasionally a direct reference to the array
-      is desired.
+        访问集合中模型的内置的JavaScript 数组。通常我们使用 <tt>get</tt>， <tt>at</tt>，或 <b>Underscore方法</b> 访问模型对象，但偶尔也需要直接访问。
+        
+
     </p>
 
     <p id="Collection-toJSON">
       <b class="header">toJSON</b><code>collection.toJSON([options])</code>
       <br />
-      Return an array containing the attributes hash of each model
-      (via <a href="#Model-toJSON">toJSON</a>) in the
-      collection. This can be used to serialize and persist the
-      collection as a whole. The name of this method is a bit confusing, because
-      it conforms to
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON_behavior">JavaScript's JSON API</a>.
+        返回集合中包含的每个模型(通过 <a href="#Model-toJSON">toJSON</a>) 的属性哈希的数组。可用于集合的序列化和持久化。本方法名称容易引起混淆，因为它与  <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#toJSON_behavior">JavaScript's JSON API</a> 命名相同。
     </p>
 
 <pre class="runnable">
@@ -1821,51 +1500,50 @@ alert(JSON.stringify(collection));
     <p id="Collection-sync">
       <b class="header">sync</b><code>collection.sync(method, collection, [options])</code>
       <br />
-      Uses <a href="#Sync">Backbone.sync</a> to persist the state of a
-      collection to the server.  Can be overridden for custom behavior.
+        使用 <a href="#Sync">Backbone.sync</a>来将一个集合的状态持久化到服务器。
+        可以自定义行为覆盖。
     </p>
 
     <p id="Collection-Underscore-Methods">
-      <b class="header">Underscore Methods (32)</b>
+      <b class="header">Underscore 方法 (32)</b>
       <br />
-      Backbone proxies to <b>Underscore.js</b> to provide 32 iteration functions
-      on <b>Backbone.Collection</b>. They aren't all documented here, but
-      you can take a look at the Underscore documentation for the full details&hellip;
+      
+        Backbone 代理了  <b>Underscore.js</b>用来给<b>Backbone.Collection</b>提供 6 个对象函数。这里没有完全记录他们，但你可以看看Underscore文档中全部详情&hellip;(愚人码头注：下面链接已经替换成中文文档的地址)
     </p>
 
     <ul class="small">
-      <li><a href="http://underscorejs.org/#each">forEach (each)</a></li>
-      <li><a href="http://underscorejs.org/#map">map (collect)</a></li>
-      <li><a href="http://underscorejs.org/#reduce">reduce (foldl, inject)</a></li>
-      <li><a href="http://underscorejs.org/#reduceRight">reduceRight (foldr)</a></li>
-      <li><a href="http://underscorejs.org/#find">find (detect)</a></li>
-      <li><a href="http://underscorejs.org/#filter">filter (select)</a></li>
-      <li><a href="http://underscorejs.org/#reject">reject</a></li>
-      <li><a href="http://underscorejs.org/#every">every (all)</a></li>
-      <li><a href="http://underscorejs.org/#some">some (any)</a></li>
-      <li><a href="http://underscorejs.org/#contains">contains (include)</a></li>
-      <li><a href="http://underscorejs.org/#invoke">invoke</a></li>
-      <li><a href="http://underscorejs.org/#max">max</a></li>
-      <li><a href="http://underscorejs.org/#min">min</a></li>
-      <li><a href="http://underscorejs.org/#sortBy">sortBy</a></li>
-      <li><a href="http://underscorejs.org/#groupBy">groupBy</a></li>
-      <li><a href="http://underscorejs.org/#shuffle">shuffle</a></li>
-      <li><a href="http://underscorejs.org/#toArray">toArray</a></li>
-      <li><a href="http://underscorejs.org/#size">size</a></li>
-      <li><a href="http://underscorejs.org/#first">first (head, take)</a></li>
-      <li><a href="http://underscorejs.org/#initial">initial</a></li>
-      <li><a href="http://underscorejs.org/#rest">rest (tail, drop)</a></li>
-      <li><a href="http://underscorejs.org/#last">last</a></li>
-      <li><a href="http://underscorejs.org/#without">without</a></li>
-      <li><a href="http://underscorejs.org/#indexOf">indexOf</a></li>
-      <li><a href="http://underscorejs.org/#lastIndexOf">lastIndexOf</a></li>
-      <li><a href="http://underscorejs.org/#isEmpty">isEmpty</a></li>
-      <li><a href="http://underscorejs.org/#chain">chain</a></li>
-      <li><a href="http://underscorejs.org/#difference">difference</a></li>
-      <li><a href="http://underscorejs.org/#sample">sample</a></li>
-      <li><a href="http://underscorejs.org/#partition">partition</a></li>
-      <li><a href="http://underscorejs.org/#countBy">countBy</a></li>
-      <li><a href="http://underscorejs.org/#indexBy">indexBy</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#each">forEach (each)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#map">map (collect)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#reduce">reduce (foldl, inject)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#reduceRight">reduceRight (foldr)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#find">find (detect)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#filter">filter (select)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#reject">reject</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#every">every (all)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#some">some (any)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#contains">contains (include)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#invoke">invoke</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#max">max</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#min">min</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#sortBy">sortBy</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#groupBy">groupBy</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#shuffle">shuffle</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#toArray">toArray</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#size">size</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#first">first (head, take)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#initial">initial</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#rest">rest (tail, drop)</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#last">last</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#without">without</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#indexOf">indexOf</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#lastIndexOf">lastIndexOf</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#isEmpty">isEmpty</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#chain">chain</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#difference">difference</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#sample">sample</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#partition">partition</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#countBy">countBy</a></li>
+      <li><a href="http://www.css88.com/doc/underscore/#indexBy">indexBy</a></li>
     </ul>
 
 <pre>
@@ -1889,15 +1567,18 @@ var alphabetical = books.sortBy(function(book) {
     <p id="Collection-add">
       <b class="header">add</b><code>collection.add(models, [options])</code>
       <br />
-      Add a model (or an array of models) to the collection, firing an <tt>"add"</tt>
-      event. If a <a href="#Collection-model">model</a> property is defined, you may also pass
-      raw attributes objects, and have them be vivified as instances of the model.
-      Returns the added (or preexisting, if duplicate) models.
-      Pass <tt>{at: index}</tt> to splice the model into the collection at the
-      specified <tt>index</tt>. If you're adding models to the collection that are
-      <i>already</i> in the collection, they'll be ignored, unless you pass
-      <tt>{merge: true}</tt>, in which case their attributes will be merged
-      into the corresponding models, firing any appropriate <tt>"change"</tt> events.
+        
+        向集合中增加一个模型（或一个模型数组），触发<tt>"add"</tt>事件。
+         如果已经定义了<a href="#Collection-model">model</a>属性，
+        您也可以通过原始属性的对象让其看起来像一个模型实例。
+        
+        返回已经添加的（或预先存在的，如果重复）模式。
+         传递<tt>{at: index}</tt>可以将模型插入集合中特定的<tt>index</tt>索引位置。
+        
+        如果您要添加 集合中已经存在的模型 到集合，他们会被忽略，
+        除非你传递<tt>{merge: true}</tt>，
+        在这种情况下，它们的属性将被合并到相应的模型中，
+        触发任何适当的<tt>"change"</tt> 事件。
     </p>
 
 <pre class="runnable">
@@ -1914,38 +1595,36 @@ ships.add([
 </pre>
 
     <p class="warning">
-      Note that adding the same model (a model with the same <tt>id</tt>) to
-      a collection more than once <br /> is a no-op.
+        请注意，添加相同的模型（具有相同<tt>id</tt>的模型）到一个集合，一次以上 <br />
+        是空操作。
     </p>
 
     <p id="Collection-remove">
       <b class="header">remove</b><code>collection.remove(models, [options])</code>
       <br />
-      Remove a model (or an array of models) from the collection, and return
-      them. Each model can be a Model instance, an <tt>id</tt> string or a JS
-      object, any value acceptable as the <tt>id</tt> argument of
-      <a href="#Collection-get"><tt>collection.get</tt></a>.
-      Fires a <tt>"remove"</tt> event, which you can use <tt>silent</tt> to suppress.
-      The model's index before removal is available to listeners as
-      <tt>options.index</tt>.
+        从集合中删除一个模型（或一个模型数组），并且返回他们。会触发 <tt>"remove"</tt> 事件，同样可以使用 <tt>silent</tt> 关闭。移除前该模型的index可用作<tt>options.index</tt>类监听。
     </p>
 
     <p id="Collection-reset">
       <b class="header">reset</b><code>collection.reset([models], [options])</code>
       <br />
-      Adding and removing models one at a time is all well and good, but sometimes
-      you have so many models to change that you'd rather just update the collection
-      in bulk. Use <b>reset</b> to replace a collection with a new list
-      of models (or attribute hashes), triggering a single <tt>"reset"</tt> event
-      at the end. Returns the newly-set models.
-      For convenience, within a <tt>"reset"</tt> event, the list of any
-      previous models is available as <tt>options.previousModels</tt>.<br />
-      Pass <tt>null</tt> for <tt>models</tt> to empty your Collection with <tt>options</tt>.
+        每次都是只添加和删除一个模型那没问题，
+        但有时，你需要改变很多模型，那么你宁愿只更新集合。
+        
+         使用<b>reset</b>，将一个新的模型（或属性散列）列表替换集合，最后触发一个但单独的<tt>"reset"</tt>事件。
+        到与模型的新列表替换集合（或属性散列），触发一个单一的“复位”事件在末端。
+        返回新的模型集合。
+        为方便起见，
+        在一个 <tt>"reset"</tt>事件中，
+        任何以前的模型列表可作为<tt>options.previousModels</tt>。 <br />
+        
+        通过传递<tt>null</tt>给<tt>models</tt>选项来清空你的集合。
     </p>
 
     <p>
-      Here's an example using <b>reset</b> to bootstrap a collection during initial page load,
-      in a Rails application:
+        下面是一个例子
+        使用<b>reset</b>来引导一个集合在页面初始化时加载，
+        在Rails应用程序中：
     </p>
 
 <pre>
@@ -1955,23 +1634,23 @@ ships.add([
 &lt;/script&gt;
 </pre>
 
-    <p>
-      Calling <tt>collection.reset()</tt> without passing any models as arguments
-      will empty the entire collection.
+    <p>调用<tt>collection.reset()</tt>，不传递任何模型作为参数
+    将清空整个集合。
     </p>
 
     <p id="Collection-set">
       <b class="header">set</b><code>collection.set(models, [options])</code>
       <br />
-      The <b>set</b> method performs a "smart" update of the collection
-      with the passed list of models. If a model in the list isn't yet in the
-      collection it will be added; if the model is already in the collection
-      its attributes will be merged; and if the collection contains any models that
-      <i>aren't</i> present in the list, they'll be removed. All of the appropriate
-      <tt>"add"</tt>, <tt>"remove"</tt>, and <tt>"change"</tt> events are fired
-      as this happens. Returns the touched models in the collection.
-      If you'd like to customize the behavior, you can disable
-      it with options: <tt>{add: false}</tt>, <tt>{remove: false}</tt>, or <tt>{merge: false}</tt>.
+        <b>set</b>方法通过传递模型列表执行一个集合的"smart(智能)"的更新。
+
+        如果列表中的一个模型尚不在集合中，那么它将被添加;
+        如果模型已经在集合中，其属性将被合并;
+        并且如果集合包含<i>不</i>存在于列表中的任何模型，他们将被删除。
+        以上所有将触发相应的<tt>"add"</tt>, <tt>"remove"</tt>, 和 <tt>"change"</tt>事件。
+        返回集合中的模型。
+        
+        如果您想自定义的行为，
+        你可以设置选项：<tt>{add: false}</tt>, <tt>{remove: false}</tt>, 或 <tt>{merge: false}</tt>，将其禁用。
     </p>
 
 <pre>
@@ -1987,8 +1666,7 @@ vanHalen.set([eddie, alex, stone, hagar]);
     <p id="Collection-get">
       <b class="header">get</b><code>collection.get(id)</code>
       <br />
-      Get a model from a collection, specified by an <a href="#Model-id">id</a>,
-      a <a href="#Model-cid">cid</a>, or by passing in a <b>model</b>.
+       通过一个<a href="#Model-id">id</a>，一个<a href="#Model-cid">cid</a>，或者传递一个<b>model</b>来 获得集合中 的模型。
     </p>
 
 <pre>
@@ -1998,84 +1676,64 @@ var book = library.get(110);
     <p id="Collection-at">
       <b class="header">at</b><code>collection.at(index)</code>
       <br />
-      Get a model from a collection, specified by index. Useful if your collection
-      is sorted, and if your collection isn't sorted, <b>at</b> will still
-      retrieve models in insertion order.
+        获得集合中指定索引的模型。不论你是否对模型进行了重新排序， <b>at</b> 始终返回其在集合中插入时的索引值。
     </p>
 
     <p id="Collection-push">
       <b class="header">push</b><code>collection.push(model, [options])</code>
-      <br />
-      Add a model at the end of a collection. Takes the same options as
-      <a href="#Collection-add">add</a>.
+      <br /> 
+      在集合尾部添加一个模型。选项和<a href="#Collection-add">add</a>相同。
     </p>
 
     <p id="Collection-pop">
       <b class="header">pop</b><code>collection.pop([options])</code>
       <br />
-      Remove and return the last model from a collection. Takes the same options as
-      <a href="#Collection-remove">remove</a>.
+        删除并且返回集合中最后一个模型。选项和<a href="#Collection-remove">remove</a>相同。
     </p>
 
     <p id="Collection-unshift">
       <b class="header">unshift</b><code>collection.unshift(model, [options])</code>
       <br />
-      Add a model at the beginning of a collection. Takes the same options as
-      <a href="#Collection-add">add</a>.
+        在集合开始的地方添加一个模型。选项和<a href="#Collection-add">add</a>相同。
     </p>
 
     <p id="Collection-shift">
       <b class="header">shift</b><code>collection.shift([options])</code>
       <br />
-      Remove and return the first model from a collection. Takes the same options as
-      <a href="#Collection-remove">remove</a>.
+        删除并且返回集合中第一个模型。选项和<a href="#Collection-remove">remove</a>相同。
     </p>
 
     <p id="Collection-slice">
       <b class="header">slice</b><code>collection.slice(begin, end)</code>
       <br />
-      Return a shallow copy of this collection's models, using the same options as
-      native
-      <a href="https://developer.mozilla.org/JavaScript/Reference/Global_Objects/Array/slice">Array#slice</a>.
+        返回一个集合的模型的浅拷贝副本，使用与原生<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array#slice</a>相同的选项。
     </p>
 
     <p id="Collection-length">
       <b class="header">length</b><code>collection.length</code>
       <br />
-      Like an array, a Collection maintains a <tt>length</tt> property, counting
-      the number of models it contains.
+        与数组类似，集合拥有 <tt>length</tt> 属性，返回该集合包含的模型数量。
     </p>
 
     <p id="Collection-comparator">
       <b class="header">comparator</b><code>collection.comparator</code>
       <br />
-      By default there is no <b>comparator</b> for a collection.
-      If you define a comparator, it will be used to maintain
-      the collection in sorted order. This means that as models are added,
-      they are inserted at the correct index in <tt>collection.models</tt>.
-      A comparator can be defined as a
-      <a href="http://underscorejs.org/#sortBy">sortBy</a>
-      (pass a function that takes a single argument),
-      as a
-      <a href="https://developer.mozilla.org/JavaScript/Reference/Global_Objects/Array/sort">sort</a>
-      (pass a comparator function that expects two arguments),
-      or as a string indicating the attribute to sort by.
+        默认情况下，集合没有声明 <b>comparator</b> 函数。如果定义了该函数，集合中的模型会按照指定的算法进行排序。 换言之，被增加模型，会被插入 <tt>collection.models</tt>中适合的位置。
+        comparator可以被定义为<a href="http://www.css88.com/doc/underscore/#sortBy">sortBy</a>（传递带有一个参数的函数），
+         作为一个<a href="https://developer.mozilla.org/JavaScript/Reference/Global_Objects/Array/sort">sort</a>（传递一个一个参数函数需要两个参数），
+        或者作为一个表示属性的字符串进行排序。
     </p>
 
     <p>
-      "sortBy" comparator functions take a model and return a numeric or string
-      value by which the model should be ordered relative to others.
-      "sort" comparator functions take two models, and return <tt>-1</tt> if
-      the first model should come before the second, <tt>0</tt> if they are of
-      the same rank and <tt>1</tt> if the first model should come after.
-      <i>Note that Backbone depends on the arity of your comparator function to
-      determine between the two styles, so be careful if your comparator function
-      is bound.</i>
+        "sortBy"比较函数接受一个模型，并且返回一个该模型相对于其他模型的排序数字或字符串值。
+         "sort"比较函数接受两个模型，并且，如果第一个模型应该在第二模型个之前，返回<tt>-1</tt>；
+        如果他们是同一等级的，返回<tt>0</tt>； 如果第一个模型应该在第二模型个之后，返回<tt>1</tt>；
+        
+        <i>需要注意的是 Backbone 这两种风格的比较功能的确定 取决于参数个数。所以如果你绑定了比较函数，需要格外小心。</i>
     </p>
 
-    <p>
-      Note how even though all of the chapters in this example are added backwards,
-      they come out in the proper order:
+    <p>注意即使下面例子中的 chapters 是后加入到集合中的，但它们都会遵循正确的排序：
+
     </p>
 
 <pre class="runnable">
@@ -2092,26 +1750,23 @@ alert(chapters.pluck('title'));
 </pre>
 
     <p class="warning">
-      Collections with a comparator will not automatically re-sort if you
-      later change model attributes, so you may wish to call
-      <tt>sort</tt> after changing model attributes that would affect the order.
+
+        如果以后更改模型属性，带有比较函数的集合不会自动重新排序。
+        所以你不妨改变模型的属性后调用<tt>sort</tt>，
+        这会影响排序。
     </p>
 
     <p id="Collection-sort">
       <b class="header">sort</b><code>collection.sort([options])</code>
       <br />
-      Force a collection to re-sort itself. You don't need to call this under
-      normal circumstances, as a collection with a <a href="#Collection-comparator">comparator</a>
-      will sort itself whenever a model is added. To disable sorting when adding
-      a model, pass <tt>{sort: false}</tt> to <tt>add</tt>. Calling <b>sort</b>
-      triggers a <tt>"sort"</tt> event on the collection.
+        强制对集合进行重排序。一般情况下不需要调用本函数，因为当一个模型被添加时， <a href="#Collection-comparator">comparator</a> 函数会实时排序。要禁用添加模型时的排序，可以传递<tt>{sort: false}</tt>给<tt>add</tt>。
+        调用<b>sort</b>会触发的集合的<tt>"sort"</tt>事件。
     </p>
 
     <p id="Collection-pluck">
       <b class="header">pluck</b><code>collection.pluck(attribute)</code>
       <br />
-      Pluck an attribute from each model in the collection. Equivalent to calling
-      <tt>map</tt> and returning a single attribute from the iterator.
+        从集合中的每个模型中拉取 attribute（属性）。等价于调用 <tt>map</tt>，并从迭代器中返回单个属性。
     </p>
 
 <pre class="runnable">
@@ -2129,8 +1784,8 @@ alert(JSON.stringify(names));
     <p id="Collection-where">
       <b class="header">where</b><code>collection.where(attributes)</code>
       <br />
-      Return an array of all the models in a collection that match the
-      passed <b>attributes</b>. Useful for simple cases of <tt>filter</tt>.
+        返回集合中所有匹配所传递 <b>attributes</b>（属性）的模型数组。
+        对于简单的<tt>filter（过滤）</tt>比较有用。
     </p>
 
 <pre class="runnable">
@@ -2149,16 +1804,15 @@ alert(musketeers.length);
     <p id="Collection-findWhere">
       <b class="header">findWhere</b><code>collection.findWhere(attributes)</code>
       <br />
-      Just like <a href="#Collection-where">where</a>, but directly returns only
-      the first model in the collection that matches the passed <b>attributes</b>.
+        就像<a href="#Collection-where">where</a>，
+        不同的是<b>findWhere</b>直接返回匹配所传递 <b>attributes</b>（属性）的第一个模型。
     </p>
 
     <p id="Collection-url">
       <b class="header">url</b><code>collection.url or collection.url()</code>
       <br />
-      Set the <b>url</b> property (or function) on a collection to reference
-      its location on the server. Models within the collection will use <b>url</b>
-      to construct URLs of their own.
+        设置 <b>url</b> 属性（或函数）以指定集合对应的服务器位置。集合内的模型使用  <b>url</b> 构造自身的 URLs。
+
     </p>
 
 <pre>
@@ -2178,13 +1832,7 @@ var Notes = Backbone.Collection.extend({
     <p id="Collection-parse">
       <b class="header">parse</b><code>collection.parse(response, options)</code>
       <br />
-      <b>parse</b> is called by Backbone whenever a collection's models are
-      returned by the server, in <a href="#Collection-fetch">fetch</a>.
-      The function is passed the raw <tt>response</tt> object, and should return
-      the array of model attributes to be <a href="#Collection-add">added</a>
-      to the collection. The default implementation is a no-op, simply passing
-      through the JSON response. Override this if you need to work with a
-      preexisting API, or better namespace your responses.
+        每一次调用  <a href="#Collection-fetch">fetch</a> 从服务器拉取集合的模型数据时，<b>parse</b>都会被调用。 本函数接收原始 <tt>response</tt> 对象，返回可以 <a href="#Collection-add">added（添加）</a> 到集合的模型属性数组。 默认实现是无需操作的，只需简单传入服务端返回的JSON对象。 如果需要处理遗留API，或者在返回数据定义自己的命名空间，可以重写本函数。
     </p>
 
 <pre>
@@ -2199,24 +1847,23 @@ var Tweets = Backbone.Collection.extend({
     <p id="Collection-clone">
       <b class="header">clone</b><code>collection.clone()</code>
       <br />
-      Returns a new instance of the collection with an identical list of models.
+        返回一个模型列表完全相同的集合新实例。
     </p>
 
     <p id="Collection-fetch">
       <b class="header">fetch</b><code>collection.fetch([options])</code>
       <br />
-      Fetch the default set of models for this collection from the server,
-      <a href="#Collection-set">setting</a> them on the collection when they arrive.
-      The <b>options</b> hash takes <tt>success</tt> and <tt>error</tt> callbacks
-      which will both be passed <tt>(collection, response, options)</tt> as arguments.
-      When the model data returns from the server, it uses <a href="#Collection-set">set</a>
-      to (intelligently) merge the fetched models, unless you pass <tt>{reset: true}</tt>,
-      in which case the collection will be (efficiently) <a href="#Collection-reset">reset</a>.
-      Delegates to <a href="#Sync">Backbone.sync</a>
-      under the covers for custom persistence strategies and returns a
-      <a href="http://api.jquery.com/jQuery.ajax/#jqXHR">jqXHR</a>.
-      The server handler for <b>fetch</b> requests should return a JSON array of
-      models.
+        从服务器拉取集合的默认模型设置
+        ，成功接收数据后会<a href="#Collection-set">setting（设置）</a>集合。
+        <b>options</b> 支持 <tt>success</tt> 和 <tt>error</tt> 回调函数，两个回调函数接收 <tt>(collection, response, options)</tt>作为参数。当模型数据从服务器返回时，
+                它使用 <a href="#Collection-set">set</a>来（智能的）合并所获取到的模型，
+                除非你传递了 <tt>{reset: true}</tt>，
+                在这种情况下，集合将（有效地）重置。
+        可以委托<a href="#Sync">Backbone.sync</a>
+        在幕后自定义持久性策略
+        并返回一个<a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/#jqXHR">jqXHR</a>。
+        
+        <b>fetch</b>请求的服务器处理器应该返回模型JSON数组。
     </p>
 
 <pre class="runnable">
@@ -2231,48 +1878,42 @@ accounts.fetch();
 </pre>
 
     <p>
-      The behavior of <b>fetch</b> can be customized by using the available
-      <a href="#Collection-set">set</a> options. For example, to fetch a
-      collection, getting an <tt>"add"</tt> event for every new model, and
-      a <tt>"change"</tt> event for every changed existing model, without
-      removing anything: <tt>collection.fetch({remove: false})</tt>
+        <b>fetch</b>行为可以通过使用有效的<a href="#Collection-set">set</a>选项进行定制。
+        例如，要获取一个集合，每一个新的模型会得到一个 <tt>"add"</tt>事件，和每改变现有的模型的
+        <tt>"change"</tt>事件，
+        不删除任何东西： <tt>collection.fetch({remove: false})</tt>
+
     </p>
 
     <p>
-      <b>jQuery.ajax</b> options can also be passed directly as <b>fetch</b> options,
-      so to fetch a specific page of a paginated collection:
-      <tt>Documents.fetch({data: {page: 3}})</tt>
+        <b>jQuery.ajax</b>选项也可以直接传递作为 <b>fetch</b>选项，
+        所以要获取一个分页集合的特定页面使用：<tt>Documents.fetch({data: {page: 3}})</tt>。
+
     </p>
 
     <p>
-      Note that <b>fetch</b> should not be used to populate collections on
-      page load &mdash; all models needed at load time should already be
-      <a href="#FAQ-bootstrap">bootstrapped</a> in to place. <b>fetch</b> is
-      intended for lazily-loading models for interfaces that are not needed
-      immediately: for example, documents with collections of notes that may be
-      toggled open and closed.
+        需要注意的是   <b>fetch</b>  不应该被用来在页面加载完毕时填充集合数据 — 所有页面初始数据应当在 <a href="#FAQ-bootstrap">bootstrapped</a> 时已经就绪。 <b>fetch</b> 适用于惰性加载不需立刻展现的模型数据：例如：例如文档中 可切换打开和关闭的选项卡内容。
     </p>
 
     <p id="Collection-create">
       <b class="header">create</b><code>collection.create(attributes, [options])</code>
       <br />
-      Convenience to create a new instance of a model within a collection.
-      Equivalent to instantiating a model with a hash of attributes,
-      saving the model to the server, and adding the model to the set after being
-      successfully created. Returns the new model. If client-side validation
-      failed, the model will be unsaved, with validation errors.
-      In order for this to work, you should set the
-      <a href="#Collection-model">model</a> property of the collection.
-      The <b>create</b> method can accept either an attributes hash or an
-      existing, unsaved model object.
+        方便的在集合中创建一个模型的新实例。
+        相当于使用属性哈希（键值对象）实例化一个模型，
+        然后将该模型保存到服务器， 创建成功后将模型添加到集合中。
+        返回这个新模型。
+        如果客户端验证失败，该模型将不会被保存，
+        与验证错误。
+        为了能正常运行，需要在集合中设置 <a href="#Collection-model">model</a> 属性。 create 方法接收键值对象或者已经存在尚未保存的模型对象作为参数。
+        
+
     </p>
 
     <p>
-      Creating a model will cause an immediate <tt>"add"</tt> event to be
-      triggered on the collection, a <tt>"request"</tt> event as the new model is
-      sent to the server, as well as a <tt>"sync"</tt> event, once the
-      server has responded with the successful creation of the model. Pass <tt>{wait: true}</tt>
-      if you'd like to wait for the server before adding the new model to the collection.
+        创建一个模型将立即触发集合上的<tt>"add"</tt>事件，
+        一个<tt>"request"</tt>的事件作为新的模型被发送到服务器，
+        还有一个 <tt>"sync"</tt> ”事件，一旦服务器响应成功创建模型。
+        如果你想在集合中添加这个模型前等待服务器相应，请传递<tt>{wait: true}</tt>。
     </p>
 
 <pre>
@@ -2288,33 +1929,23 @@ var othello = nypl.create({
 });
 </pre>
 
-    <h2 id="Router">Backbone.Router</h2>
+    <h2 id="Router">Backbone.Router（路由）</h2>
 
     <p>
-      Web applications often provide linkable, bookmarkable, shareable URLs for
-      important locations in the app. Until recently, hash fragments
-      (<tt>#page</tt>) were used to provide these permalinks, but with the
-      arrival of the History API, it's now possible to use standard URLs (<tt>/page</tt>).
-      <b>Backbone.Router</b> provides methods for routing client-side pages, and
-      connecting them to actions and events. For browsers which don't yet support
-      the History API, the Router handles graceful fallback and transparent
-      translation to the fragment version of the URL.
+        web应用程序通常需要为应用的重要位置提供可链接，可收藏，可分享的 URLs。 直到最近， 猫点（hash）片段（<tt>#page</tt>）可以被用来提供这种链接， 同时随着 History API 的到来，猫点已经可以用于处理标准 URLs （<tt>/page</tt>）。 <b>Backbone.Router</b> 为客户端路由提供了许多方法，并能连接到指定的动作（actions）和事件（events）。 对于不支持 History API 的旧浏览器，路由提供了优雅的回调函数并可以透明的进行 URL 片段的转换。
+        
+
     </p>
 
     <p>
-      During page load, after your application has finished creating all of its routers,
-      be sure to call <tt>Backbone.history.start()</tt> or
-      <tt>Backbone.history.start({pushState: true})</tt> to route the initial URL.
+        页面加载期间，当应用已经创建了所有的路由，需要调用  <tt>Backbone.history.start()</tt>，或 <tt>Backbone.history.start({pushState: true})</tt> 来确保驱动初始化 URL 的路由。
     </p>
 
     <p id="Router-extend">
       <b class="header">extend</b><code>Backbone.Router.extend(properties, [classProperties])</code>
       <br />
-      Get started by creating a custom router class. Define actions that are
-      triggered when certain URL fragments are
-      matched, and provide a <a href="#Router-routes">routes</a> hash
-      that pairs routes to actions. Note that you'll want to avoid using a
-      leading slash in your route definitions:
+        开始创建一个自定义的路由类。当匹配了 URL 片段便执行定义的动作，并可以通过 <a href="#Router-routes">routes</a> 定义路由动作键值对。
+        请注意，你要避免在路由定义时使用前导斜杠：
     </p>
 
 <pre>
@@ -2340,47 +1971,31 @@ var Workspace = Backbone.Router.extend({
     <p id="Router-routes">
       <b class="header">routes</b><code>router.routes</code>
       <br />
-      The routes hash maps URLs with parameters to functions on your router
-      (or just direct function definitions, if you prefer),
-      similar to the <a href="#View">View</a>'s <a href="#View-delegateEvents">events hash</a>.
-      Routes can contain parameter parts, <tt>:param</tt>, which match a single URL
-      component between slashes; and splat parts <tt>*splat</tt>, which can match
-      any number of URL components. Part of a route can be made optional by
-      surrounding it in parentheses <tt>(/:optional)</tt>.
+        routes 将带参数的 URLs 映射到路由实例的方法上（或只是直接的函数定义，如果你喜欢），这与 <a href="#View">View（视图）</a> 的 <a href="#View-delegateEvents">events hash（事件键值对）</a> 非常类似。 路由可以包含参数， <tt>:param</tt>，它在斜线之间匹配 URL 组件。 路由也支持通配符， <tt>*splat</tt>，可以匹配多个 URL 组件。  路由的可选部分放在括号中<tt>(/:optional)</tt>。
     </p>
 
     <p>
-      For example, a route of <tt>"search/:query/p:page"</tt> will match
-      a fragment of <tt>#search/obama/p2</tt>, passing <tt>"obama"</tt>
-      and <tt>"2"</tt> to the action.
+        举个例子，路由 <tt>"search/:query/p:page"</tt> 能匹配<tt>#search/obama/p2</tt> , 这里传入了  <tt>"obama"</tt> 和  <tt>"2"</tt> 到路由对应的动作中去了。
     </p>
 
     <p>
-      A route of <tt>"file/*path"</tt> will match
-      <tt>#file/nested/folder/file.txt</tt>, passing
-      <tt>"nested/folder/file.txt"</tt> to the action.
+        路由 <tt>"file/*path"</tt>可以匹配 <tt>#file/nested/folder/file.txt</tt>，这时传入动作的参数为 <tt>"nested/folder/file.txt"</tt>。
     </p>
 
     <p>
-      A route of <tt>"docs/:section(/:subsection)"</tt> will match
-      <tt>#docs/faq</tt> and <tt>#docs/faq/installing</tt>, passing
-      <tt>"faq"</tt> to the action in the first case, and passing <tt>"faq"</tt>
-      and <tt>"installing"</tt> to the action in the second.
+        路由 <tt>"docs/:section(/:subsection)"</tt>可以匹配<tt>#docs/faq</tt> 和 <tt>#docs/faq/installing</tt>，第一种情况，传入  <tt>"faq"</tt> 到路由对应的动作中去， 第二种情况，传入<tt>"faq"</tt>
+              和 <tt>"installing"</tt> 到路由对应的动作中去。
     </p>
 
     <p>
-      Trailing slashes are treated as part of the URL, and (correctly) treated
-      as a unique route when accessed. <tt>docs</tt> and <tt>docs/</tt> will fire
-      different callbacks. If you can't avoid generating both types of URLs, you
-      can define a <tt>"docs(/)"</tt> matcher to capture both cases.
+        结尾的斜杠会被当作URL的一部分， 访问时会被（正确地）当作一个独立的路由。
+        <tt>docs</tt> 和 <tt>docs/</tt>将触发不同的回调。
+        如果你不能避免产生这两种类型的URLs时，
+        你可以定义一个<tt>"docs(/)"</tt>来匹配捕捉这两种情况。
     </p>
 
     <p>
-      When the visitor presses the back button, or enters a URL, and a particular
-      route is matched, the name of the action will be fired as an
-      <a href="#Events">event</a>, so that other objects can listen to the router,
-      and be notified. In the following example, visiting <tt>#help/uploading</tt>
-      will fire a <tt>route:help</tt> event from the router.
+        当访问者点击浏览器后退按钮，或者输入 URL ，如果匹配一个路由，此时会触发一个基于动作名称的  <a href="#Events">event</a>， 其它对象可以监听这个路由并接收到通知。 下面的示例中，用户访问 <tt>#help/uploading</tt> 将从路由中触发 <tt>route:help</tt> 事件。
     </p>
 
 <pre>
@@ -2401,22 +2016,14 @@ router.on("route:help", function(page) {
     <p id="Router-constructor">
       <b class="header">constructor / initialize</b><code>new Router([options])</code>
       <br />
-      When creating a new router, you may pass its
-      <a href="#Router-routes">routes</a> hash directly as an option, if you
-      choose. All <tt>options</tt> will also be passed to your <tt>initialize</tt>
-      function, if defined.
+        当创建一个新路由是，你可以直接传入 <a href="#Router-routes">routes</a> 键值对象作为参数。 如果定义该参数， 它们将被传入 <tt>initialize</tt> 构造函数中初始化。
     </p>
 
     <p id="Router-route">
       <b class="header">route</b><code>router.route(route, name, [callback])</code>
       <br />
-      Manually create a route for the router, The <tt>route</tt> argument may
-      be a <a href="#Router-routes">routing string</a> or regular expression.
-      Each matching capture from the route or regular expression will be passed as
-      an argument to the callback. The <tt>name</tt> argument will be triggered as
-      a <tt>"route:name"</tt> event whenever the route is matched.  If the
-      <tt>callback</tt> argument is omitted <tt>router[name]</tt> will be used
-      instead. Routes added later may override previously declared routes.
+        为路由对象手动创建路由，<tt>route</tt> 参数可以是 <a href="#Router-routes">routing string（路由字符串）</a> 或 正则表达式。 每个捕捉到的被传入的路由或正则表达式，都将作为参数传入回调函数（callback）。 一旦路由匹配， <tt>name</tt>  参数会触发 <tt>"route:name"</tt> 事件。如果<tt>callback</tt>参数省略 <tt>router[name]</tt>将被用来代替。
+        后来添加的路由可以覆盖先前声明的路由。
     </p>
 
 <pre>
@@ -2436,12 +2043,12 @@ open: function(id) { ... }
     <p id="Router-navigate">
       <b class="header">navigate</b><code>router.navigate(fragment, [options])</code>
       <br />
-      Whenever you reach a point in your application that you'd like to save
-      as a URL, call <b>navigate</b> in order to update the URL.
-      If you also wish to call the route function, set the <b>trigger</b>
-      option to <tt>true</tt>.
-      To update the URL without creating an entry in the browser's history,
-      set the <b>replace</b> option to <tt>true</tt>.
+        每当你达到你的应用的一个点时，你想保存为一个URL，
+         可以调用<b>navigate</b>以更新的URL。
+        如果您也想调用路由功能，
+        设置<b>trigger</b>选项设置为<tt>true</tt>。
+        无需在浏览器的历史记录创建条目来更新URL，
+         设置 <b>replace</b>选项设置为<tt>true</tt>。
     </p>
 
 <pre>
@@ -2462,11 +2069,11 @@ app.navigate("help/troubleshooting", {trigger: true, replace: true});
     <p id="Router-execute">
       <b class="header">execute</b><code>router.execute(callback, args)</code>
       <br />
-      This method is called internally within the router, whenever a route
-      matches and its corresponding <b>callback</b> is about to be executed.
-      Override it to perform custom parsing or wrapping of your routes, for
-      example, to parse query strings before handing them to your route
-      callback, like so:
+        这种方法在路由内部被调用，
+         每当路由和其相应的<b>callback</b>匹配时被执行。
+        覆盖它来执行自定义解析或包装路由，
+        例如，
+        在传递他们给你的路由回调之前解析查询字符串，像这样：
     </p>
 
 <pre>
@@ -2481,67 +2088,49 @@ var Router = Backbone.Router.extend({
     <h2 id="History">Backbone.history</h2>
 
     <p>
-      <b>History</b> serves as a global router (per frame) to handle <tt>hashchange</tt>
-      events or <tt>pushState</tt>, match the appropriate route, and trigger callbacks.
-      You shouldn't ever have to create one of these yourself since <tt>Backbone.history</tt>
-      already contains one.
+        <b>History</b> 作为全局路由服务用于处理 <tt>hashchange</tt> 事件或  <tt>pushState</tt>，匹配适合的路由，并触发回调函数。 我们不需要自己去做这些事情 — 如果使用带有键值对的 路由，<tt>Backbone.history</tt> 会被自动创建。
     </p>
 
     <p>
-      <b>pushState</b> support exists on a purely opt-in basis in Backbone.
-      Older browsers that don't support <tt>pushState</tt> will continue to use
-      hash-based URL fragments, and if a hash URL is visited by a
-      <tt>pushState</tt>-capable browser, it will be transparently upgraded to
-      the true URL. Note that using real URLs requires your web server to be
-      able to correctly render those pages, so back-end changes are required
-      as well. For example, if you have a route of <tt>/documents/100</tt>,
-      your web server must be able to serve that page, if the browser
-      visits that URL directly. For full search-engine crawlability, it's best to
-      have the server generate the complete HTML for the page ... but if it's a web
-      application, just rendering the same content you would have for the root URL,
-      and filling in the rest with Backbone Views and JavaScript works fine.
-    </p>
+          Backbone 会自动判断浏览器对 <b>pushState</b> 的支持，以做内部的选择。
+          不支持 <tt>pushState</tt> 的浏览器将会继续使用基于猫点的 URL 片段，
+          如果兼容 <tt>pushState</tt> 的浏览器访问了某个 URL 猫点，将会被透明的转换为真实的 URL。
+          注意使用真实的 URLs 需要 web 服务器支持直接渲染那些页面，因此后端程序也需要做修改。
+          例如，如果有这样一个路由 <tt>/document/100</tt>，如果浏览器直接访问它， web 服务器必须能够处理该页面。
+          趋于对搜索引擎爬虫的兼容，让服务器完全为该页面生成静态 HTML 是非常好的做法 ...
+          但是如果要做的是一个 web 应用，只需要利用 Javascript 和 Backbone 视图将服务器返回的 REST 数据渲染就很好了。
+        </p>
+    
+
 
     <p id="History-start">
       <b class="header">start</b><code>Backbone.history.start([options])</code>
       <br />
-      When all of your <a href="#Router">Routers</a> have been created,
-      and all of the routes are set up properly, call <tt>Backbone.history.start()</tt>
-      to begin monitoring <tt>hashchange</tt> events, and dispatching routes.
-      Subsequent calls to <tt>Backbone.history.start()</tt> will throw an error,
-      and <tt>Backbone.History.started</tt> is a boolean value indicating whether
-      it has already been called.
+        当所有的 <a href="#Router">Routers</a> 创建并设置完毕，调用 <tt>Backbone.history.start()</tt> 开始监控 <tt>hashchange</tt> 事件并分配路由。后续调用<tt>Backbone.history.start()</tt>会抛出一个错误，
+        并且<tt>Backbone.History.started</tt>是一个布尔值，指示是否已经被调用。
     </p>
 
     <p>
-      To indicate that you'd like to use HTML5 <tt>pushState</tt> support in
-      your application, use <tt>Backbone.history.start({pushState: true})</tt>.
-      If you'd like to use <tt>pushState</tt>, but have browsers that don't support
-      it natively use full page refreshes instead, you can add
-      <tt>{hashChange: false}</tt> to the options.
-    </p>
+          需要指出的是，如果想在应用中使用 HTML5 支持的 <tt>pushState</tt>，只需要这样做：<tt>Backbone.history.start({pushState : true})</tt> 。如果你想使用<tt>pushState</tt>的话，
+          对于那些本身不支持它的浏览器，需要用整页刷新代替，
+          您可以添加<tt>{hashChange: false}</tt>到选项。
+        </p>
 
     <p>
-      If your application is not being served from the root url <tt>/</tt> of your
-      domain, be sure to tell History where the root really is, as an option:
-      <tt>Backbone.history.start({pushState: true, root: "/public/search/"})</tt>
-    </p>
+          如果应用不是基于域名的根路径 <tt>/</tt>，需要告诉 History 基于什么路径：
+          <tt>Backbone.history.start({pushState: true, root: "/public/search/"})</tt>
+        </p>
 
     <p>
-      When called, if a route succeeds with a match for the current URL,
-      <tt>Backbone.history.start()</tt> returns <tt>true</tt>. If no defined
-      route matches the current URL, it returns <tt>false</tt>.
-    </p>
-
+          当执行后，如果某个路由成功匹配当前 URL，<tt>Backbone.history.start()</tt> 返回 <tt>true</tt>。
+          如果没有定义的路由匹配当前 URL，返回 <tt>false</tt>。
+        </p>
     <p>
-      If the server has already rendered the entire page, and you don't want the
-      initial route to trigger when starting History, pass <tt>silent: true</tt>.
-    </p>
+          如果服务器已经渲染了整个页面，但又不希望开始 History 时触发初始路由，传入 <tt>silent : true</tt> 即可。
+        </p>
 
-    <p>
-      Because hash-based history in Internet Explorer relies on an
-      <tt>&lt;iframe&gt;</tt>, be sure to call <tt>start()</tt> only after the DOM
-      is ready.
+
+    <p>  因为在Internet Explorer中基于hash的历史记录依赖于<tt>&lt;iframe&gt;</tt>，因此需要确定DOM已准备就绪后再调用 <tt>start()</tt> 。
     </p>
 
 <pre>
@@ -2552,51 +2141,44 @@ $(function(){
 });
 </pre>
 
-    <h2 id="Sync">Backbone.sync</h2>
+    <h2 id="Sync">Backbone.sync（同步）</h2>
 
     <p>
-      <b>Backbone.sync</b> is the function that Backbone calls every time it
-      attempts to read or save a model to the server. By default, it uses
-      <tt>jQuery.ajax</tt> to make a RESTful JSON request and returns a
-      <a href="http://api.jquery.com/jQuery.ajax/#jqXHR">jqXHR</a>. You can override
-      it in order to use a different persistence strategy, such as WebSockets,
-      XML transport, or Local Storage.
-    </p>
+          <b>Backbone.sync</b> 是 Backbone 每次向服务器读取或保存模型时都要调用执行的函数。
+          默认情况下，它使用 <tt>jQuery.ajax</tt> 方法发送 RESTful json 请求，并且返回一个 <a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/#jqXHR">jqXHR</a>。
+          如果想采用不同的持久化方案，比如 WebSockets, XML, 或 Local Storage，我们可以重载该函数。
+        </p>
+    
 
     <p>
-      The method signature of <b>Backbone.sync</b> is <tt>sync(method, model, [options])</tt>
-    </p>
+          <b>Backbone.sync</b> 的语法为 <tt>sync(method, model, [options])</tt>。
+        </p>
 
     <ul>
-      <li><b>method</b> – the CRUD method (<tt>"create"</tt>, <tt>"read"</tt>, <tt>"update"</tt>, or <tt>"delete"</tt>)</li>
-      <li><b>model</b> – the model to be saved (or collection to be read)</li>
-      <li><b>options</b> – success and error callbacks, and all other jQuery request options</li>
+      <li><b>method</b> – CRUD 方法 (<tt>"create"</tt>, <tt>"read"</tt>, <tt>"update"</tt>, or <tt>"delete"</tt>)</li>
+      <li><b>model</b> – 要被保存的模型（或要被读取的集合）</li>
+      <li><b>options</b> – 成功和失败的回调函数，以及所有 jQuery 请求支持的选项</li>
     </ul>
 
     <p>
-      With the default implementation, when <b>Backbone.sync</b> sends up a request to save
-      a model, its attributes will be passed, serialized as JSON, and sent in the HTTP body
-      with content-type <tt>application/json</tt>. When returning a JSON response,
-      send down the attributes of the  model that have been changed by the server, and need
-      to be updated on the client. When responding to a <tt>"read"</tt> request from a collection
-      (<a href="#Collection-fetch">Collection#fetch</a>), send down an array
-      of model attribute objects.
+          默认情况下，当 <b>Backbone.sync</b> 发送请求以保存模型时，其属性会被序列化为 JSON，并以 <tt>application/json</tt> 的内容类型发送。
+          当接收到来自服务器的 JSON 响应后，对经过服务器改变的模型进行拆解，然后在客户端更新。
+          当 <tt>"read"</tt> 请求从服务器端响应一个集合（<a href="#Collection#fetch">Collection#fetch</a>）时，便拆解模型属性对象的数组。
+        </p>
+
+
+    <p> 当一个模型或集合开始 <b>sync</b>到服务器时，将触发一个 <tt>"request"</tt> 事件。
+    如果请求成功完成，你会得到一个<tt>"sync"</tt>事件，  如果请求失败，你会得到一个 <tt>"error"</tt>事件。
+
     </p>
 
     <p>
-      Whenever a model or collection begins a <b>sync</b> with the server, a
-      <tt>"request"</tt> event is emitted. If the request completes successfully
-      you'll get a <tt>"sync"</tt> event, and an <tt>"error"</tt> event if not.
+        <b>sync</b>函数可重写为全局性的<tt>Backbone.sync</tt>，
+        或在细粒度级别，
+        通过添加一个 <tt>sync</tt>函数 到Backbone集合或单个模型时。
     </p>
 
-    <p>
-      The <b>sync</b> function may be overridden globally as <tt>Backbone.sync</tt>,
-      or at a finer-grained level, by adding a <tt>sync</tt> function to a Backbone
-      collection or to an individual model.
-    </p>
-
-    <p>
-      The default <b>sync</b> handler maps CRUD to REST like so:
+    <p> 默认  <b>sync</b> 映射 REST 风格的 CRUD 类似下面这样：
     </p>
 
     <ul>
@@ -2607,10 +2189,11 @@ $(function(){
       <li><b>delete &rarr; DELETE &nbsp; </b><tt>/collection/id</tt></li>
     </ul>
 
-    <p>
-      As an example, a Rails 4 handler responding to an <tt>"update"</tt> call from
-      <tt>Backbone</tt> might look like this:
-    </p>
+    <p>举个例子，一个Rail 4 处理程序响应一个来自<tt>Backbone</tt>的<tt>"update"</tt>调用，可能是这样的：
+        <i>（在真正的代码中，
+    千万不要盲目的使用<tt>update_attributes</tt>，
+    ，你可以被改变的属性始终是白名单。）</i>
+        </p>
 
 <pre>
 def update
@@ -2621,28 +2204,29 @@ end
 </pre>
 
     <p>
-      One more tip for integrating Rails versions prior to 3.1 is to disable
-      the default namespacing for <tt>to_json</tt> calls on models by setting
-      <tt>ActiveRecord::Base.include_root_in_json = false</tt>
+        一个技巧：
+        通过设置<tt>ActiveRecord::Base.include_root_in_json = false</tt>，在模型上禁用默认命名空间的<tt>to_json</tt>来整合 Rails 3.1之前的版本，
+        。
     </p>
 
     <p id="Sync-ajax">
       <b class="header">ajax</b><code>Backbone.ajax = function(request) { ... };</code>
       <br />
-      If you want to use a custom AJAX function, or your endpoint doesn't support
-      the <a href="http://api.jquery.com/jQuery.ajax/">jQuery.ajax</a> API
-      and you need to tweak things, you can do so by setting <tt>Backbone.ajax</tt>.
+        如果你想使用自定义的AJAX功能，
+        或者你的客户端不支持的<a href="http://www.css88.com/jqapi-1.9/jQuery.ajax/">jQuery.ajax</a> API，你需要调整的东西，
+        您可以通过设置<tt>Backbone.ajax</tt>这样做。
     </p>
 
     <p id="Sync-emulateHTTP">
       <b class="header">emulateHTTP</b><code>Backbone.emulateHTTP = true</code>
       <br />
-      If you want to work with a legacy web server that doesn't support Backbone's
-      default REST/HTTP approach, you may choose to turn on <tt>Backbone.emulateHTTP</tt>.
-      Setting this option will fake <tt>PUT</tt>, <tt>PATCH</tt> and <tt>DELETE</tt> requests with
-      a HTTP <tt>POST</tt>, setting the <tt>X-HTTP-Method-Override</tt> header
-      with the true method. If <tt>emulateJSON</tt> is also on, the true method
-      will be passed as an additional <tt>_method</tt> parameter.
+        
+      
+        如果你想在不支持Backbone的默认REST/ HTTP方式的Web服务器上工作，
+        您可以选择开启<tt>Backbone.emulateHTTP</tt>。
+        设置该选项将通过 <tt>POST</tt> 方法伪造 <tt>PUT</tt>，<tt>PATCH</tt> 和 <tt>DELETE</tt> 请求
+        用真实的方法设定<tt>X-HTTP-Method-Override</tt>头信息。
+        如果支持<tt>emulateJSON</tt>，此时该请求会向服务器传入名为 <tt>_method</tt> 的参数。
     </p>
 
 <pre>
@@ -2654,36 +2238,29 @@ model.save();  // POST to "/collection/id", with "_method=PUT" + header.
     <p id="Sync-emulateJSON">
       <b class="header">emulateJSON</b><code>Backbone.emulateJSON = true</code>
       <br />
-      If you're working with a legacy web server that can't handle requests
-      encoded as <tt>application/json</tt>, setting <tt>Backbone.emulateJSON = true;</tt>
-      will cause the JSON to be serialized under a <tt>model</tt> parameter, and
-      the request to be made with a <tt>application/x-www-form-urlencoded</tt>
-      MIME type, as if from an HTML form.
+        如果你想在不支持发送  <tt>application/json</tt> 编码请求的Web服务器上工作，设置<tt>Backbone.emulateJSON = true;</tt>将导致JSON根据模型参数进行序列化，
+        并通过<tt>application/x-www-form-urlencoded</tt> MIME类型来发送一个伪造HTML表单请求，
+
     </p>
 
-    <h2 id="View">Backbone.View</h2>
+    <h2 id="View">Backbone.View（视图）</h2>
 
     <p>
-      Backbone views are almost more convention than they are code &mdash; they
-      don't determine anything about your HTML or CSS for you, and can be used
-      with any JavaScript templating library.
-      The general idea is to organize your interface into logical views,
-      backed by models, each of which can be updated independently when the
-      model changes, without having to redraw the page. Instead of digging into
-      a JSON object, looking up an element in the DOM, and updating the HTML by hand,
-      you can bind your view's <tt>render</tt> function to the model's <tt>"change"</tt>
-      event &mdash; and now everywhere that
-      model data is displayed in the UI, it is always immediately up to date.
+
+        
+        Backbone 视图几乎约定比他们的代码多 &mdash;
+        他们并不限定你的HTML或CSS，
+        并可以配合使用任何JavaScript模板库。
+        一般是组织您的接口转换成逻辑视图，
+        通过模型的支持， 模型变化时，
+        每一个都可以独立地进行更新，
+        而不必重新绘制该页面。我们再也不必钻进 JSON 对象中，查找 DOM 元素，手动更新 HTML 了，通过绑定视图的 <tt>render</tt> 函数到模型的  <tt>"change"</tt> 事件 — 模型数据会即时的显示在 UI 中。
     </p>
 
     <p id="View-extend">
       <b class="header">extend</b><code>Backbone.View.extend(properties, [classProperties])</code>
       <br />
-      Get started with views by creating a custom view class. You'll want to
-      override the <a href="#View-render">render</a> function, specify your
-      declarative <a href="#View-delegateEvents">events</a>, and perhaps the
-      <tt>tagName</tt>, <tt>className</tt>, or <tt>id</tt> of the View's root
-      element.
+        开始创建自定义的视图类。 通常我们需要重载 <a href="#View-render">render</a> 函数，声明  <a href="#View-delegateEvents">events</a>， 以及通过 <tt>tagName</tt>, <tt>className</tt>, 或 <tt>id</tt> 为视图指定根元素。
     </p>
 
 <pre>
@@ -2711,22 +2288,22 @@ var DocumentRow = Backbone.View.extend({
 </pre>
 
     <p>
-      Properties like <tt>tagName</tt>, <tt>id</tt>, <tt>className</tt>,
-      <tt>el</tt>, and <tt>events</tt> may also be defined as a function, if
-      you want to wait to define them until runtime.
+        直到运行时， 像<tt>tagName</tt>, <tt>id</tt>, <tt>className</tt>,
+              <tt>el</tt>, 和 <tt>events</tt>这样的属性也可以被定义为一个函数，
+        
     </p>
 
     <p id="View-constructor">
       <b class="header">constructor / initialize</b><code>new View([options])</code>
       <br />
-      There are several special
-      options that, if passed, will be attached directly to the view:
-      <tt>model</tt>, <tt>collection</tt>,
-      <tt>el</tt>, <tt>id</tt>, <tt>className</tt>, <tt>tagName</tt>, <tt>attributes</tt> and <tt>events</tt>.
-      If the view defines an <b>initialize</b> function, it will be called when
-      the view is first created. If you'd like to create a view that references
-      an element <i>already</i> in the DOM, pass in the element as an option:
-      <tt>new View({el: existingElement})</tt>
+        
+        有几个特殊的选项，
+        如果传入，则直接注册到视图中去： <tt>model</tt>, <tt>collection</tt>,
+              <tt>el</tt>, <tt>id</tt>, <tt>className</tt>, <tt>tagName</tt>, <tt>attributes</tt> 和 <tt>events</tt>。
+
+        如果视图定义了一个<b>initialize</b>初始化函数，
+        首先创建视图时，它会立刻被调用。
+        如果希望创建一个指向 DOM 中已存在的元素的视图，传入该元素作为选项：<tt>new View({el: existingElement})</tt>。
     </p>
 
 <pre>
@@ -2741,19 +2318,7 @@ new DocumentRow({
     <p id="View-el">
       <b class="header">el</b><code>view.el</code>
       <br />
-      All views have a DOM element at all times (the <b>el</b> property),
-      whether they've already been inserted into the page or not. In this
-      fashion, views can be rendered at any time, and inserted into the DOM all
-      at once, in order to get high-performance UI rendering with as few
-      reflows and repaints as possible.
-    </p>
-
-    <p>
-      <tt>this.el</tt> can be resolved from a DOM selector string or an Element;
-      otherwise it will be created from the view's <tt>tagName</tt>, <tt>className</tt>,
-      <tt>id</tt> and <a href="#View-attributes"><tt>attributes</tt></a> properties.
-      If none are set, <tt>this.el</tt> is an empty <tt>div</tt>, which is often just
-      fine. An <b>el</b> reference may also be passed in to the view's constructor.
+        所有的视图都拥有一个 DOM 元素（<b>el</b> 属性），即使该元素仍未插入页面中去。 视图可以在任何时候渲染，然后一次性插入 DOM 中去，这样能尽量减少 reflows 和 repaints 从而获得高性能的 UI 渲染。 <tt>this.el</tt> 可以从视图的 <tt>tagName</tt>, <tt>className</tt>, <tt>id</tt> 和 <tt>attributes</tt> 创建，如果都未指定，<b>el</b> 会是一个空 <tt>div</tt>。
     </p>
 
 <pre class="runnable">
@@ -2774,8 +2339,8 @@ alert(item.el + ' ' + body.el);
     <p id="View-$el">
       <b class="header">$el</b><code>view.$el</code>
       <br />
-      A cached jQuery object for the view's element. A handy
-      reference instead of re-wrapping the DOM element all the time.
+       一个视图元素的缓存jQuery对象。
+        一个简单的引用，而不是重新包装的DOM元素。
     </p>
 
 <pre>
@@ -2787,27 +2352,25 @@ listView.$el.append(itemView.el);
     <p id="View-setElement">
       <b class="header">setElement</b><code>view.setElement(element)</code>
       <br />
-      If you'd like to apply a Backbone view to a different DOM element, use
-      <b>setElement</b>, which will also create the cached <tt>$el</tt> reference
-      and move the view's delegated events from the old element to the new one.
+        如果你想应用一个Backbone视图到不同的DOM元素，
+        使用<b>setElement</b>，
+        这也将创造缓存<tt>$el</tt>引用，视图的委托事件从旧元素移动到新元素上。
     </p>
 
     <p id="View-attributes">
       <b class="header">attributes</b><code>view.attributes</code>
       <br />
-      A hash of attributes that will be set as HTML DOM element attributes on the
-      view's <tt>el</tt> (id, class, data-properties, etc.), or a function that
-      returns such a hash.
+        属性的键值对，
+        将被设置为视图<tt>el</tt>上的HTML DOM元素的属性，
+        或者是返回这样的键值对的一个函数。
     </p>
 
     <p id="View-dollar">
       <b class="header">$ (jQuery)</b><code>view.$(selector)</code>
       <br />
-      If jQuery is included on the page, each view has a
-      <b>$</b> function that runs queries scoped within the view's element. If you use this
-      scoped jQuery function, you don't have to use model ids as part of your query
-      to pull out specific elements in a list, and can rely much more on HTML class
-      attributes. It's equivalent to running: <tt>view.$el.find(selector)</tt>
+        如果页面中引入了 jQuery，每个视图都将拥有 <b>$</b> 函数，可以在视图元素查询作用域内运行。 如果使用该作用域内的 jQuery 函数，就不需要从列表中指定的元素获取模型的 ids 这种查询了，我们可以更多的依赖 HTML class 属性。 它等价于运行：<tt>view.$el.find(selector)</tt>。
+        
+
     </p>
 
 <pre>
@@ -2825,11 +2388,15 @@ ui.Chapter = Backbone.View.extend({
     <p id="View-template">
       <b class="header">template</b><code>view.template([data])</code>
       <br />
-      While templating for a view isn't a function provided directly by Backbone,
-      it's often a nice convention to define a <b>template</b> function on your
-      views. In this way, when rendering your view, you have convenient access to
-      instance data.
-      For example, using Underscore templates:
+        虽然模板化的视图
+        不是Backbone直接提供的一个功能，
+        它往往是一个在你视图定义<b>template</b>函数很好的约定。
+        如此，
+        渲染你的视图时，
+        您方便地访问实例数据。
+        例如，使用Underscore的模板：
+        
+
     </p>
 
 <pre>
@@ -2841,11 +2408,7 @@ var LibraryView = Backbone.View.extend({
     <p id="View-render">
       <b class="header">render</b><code>view.render()</code>
       <br />
-      The default implementation of <b>render</b> is a no-op. Override this
-      function with your code that renders the view template from model data,
-      and updates <tt>this.el</tt> with the new HTML. A good
-      convention is to <tt>return this</tt> at the end of <b>render</b> to
-      enable chained calls.
+        <b>render</b> 默认实现是没有操作的。 重载本函数可以实现从模型数据渲染视图模板，并可用新的 HTML 更新 <tt>this.el</tt>。 推荐的做法是在 <b>render</b> 函数的末尾 <tt>return this</tt> 以开启链式调用。
     </p>
 
 <pre>
@@ -2859,70 +2422,54 @@ var Bookmark = Backbone.View.extend({
 </pre>
 
     <p>
-      Backbone is agnostic with respect to your preferred method of HTML templating.
-      Your <b>render</b> function could even munge together an HTML string, or use
-      <tt>document.createElement</tt> to generate a DOM tree. However, we suggest
-      choosing a nice JavaScript templating library.
-      <a href="http://github.com/janl/mustache.js">Mustache.js</a>,
-      <a href="http://github.com/creationix/haml-js">Haml-js</a>, and
-      <a href="http://github.com/sstephenson/eco">Eco</a> are all fine alternatives.
-      Because <a href="http://underscorejs.org/">Underscore.js</a> is already on the page,
-      <a href="http://underscorejs.org/#template">_.template</a>
-      is available, and is an excellent choice if you prefer simple
-      interpolated-JavaScript style templates.
+        
+        Backbone并不知道您首选HTML模板的方法。
+        <b>render</b>（渲染） 函数中可以采用拼接HTML字符串，，
+        或者使用<tt>document.createElement</tt>生成DOM树。
+        但还是建议选择一个好的 Javascript 模板引擎。
+        <a href="http://github.com/janl/mustache.js">Mustache.js</a>,
+              <a href="http://github.com/creationix/haml-js">Haml-js</a>, 和
+              <a href="http://github.com/sstephenson/eco">Eco</a>
+        都是很好的选择。
+        
+        因为<a href="http://www.css88.com/doc/underscore/">Underscore.js</a>已经引入页面了，如果你喜欢简单的插入JavaScript的样式模板。
+         <a href="http://www.css88.com/doc/underscore/#template">_.template</a>可以使用并是一个很好的选择。
     </p>
 
     <p>
-      Whatever templating strategy you end up with, it's nice if you <i>never</i>
-      have to put strings of HTML in your JavaScript. At DocumentCloud, we
-      use <a href="http://documentcloud.github.com/jammit/">Jammit</a> in order
-      to package up JavaScript templates stored in <tt>/app/views</tt> as part
-      of our main <tt>core.js</tt> asset package.
+        无论基于什么考虑，都<i>永远</i>不要在 Javascript 中拼接 HTML 字符串。
+        在DocumentCloud中，
+        我们使用<a href="http://documentcloud.github.com/jammit/">Jammit
+    </a>来打包JavaScript模板，并存储在<tt>/app/views</tt>中，作为我们主要的<tt>core.js</tt>包的一部分。
     </p>
 
     <p id="View-remove">
       <b class="header">remove</b><code>view.remove()</code>
       <br />
-      Removes a view from the DOM, and calls
-      <a href="#Events-stopListening">stopListening</a> to remove any bound
-      events that the view has <a href="#Events-listenTo">listenTo</a>'d.
+        从 DOM 中移除一个视图。同事调用<a href="#Events-stopListening">stopListening</a>来移除通过 <a href="#Events-listenTo">
+        listenTo</a>绑定在视图上的 所有事件。
     </p>
 
     <p id="View-delegateEvents">
       <b class="header">delegateEvents</b><code>delegateEvents([events])</code>
       <br />
-      Uses jQuery's <tt>on</tt> function to provide declarative callbacks
-      for DOM events within a view.
-      If an <b>events</b> hash is not passed directly, uses <tt>this.events</tt>
-      as the source. Events are written in the format <tt>{"event selector": "callback"}</tt>.
-      The callback may be either the name of a method on the view, or a direct
-      function body.
-      Omitting the <tt>selector</tt> causes the event to be bound to the view's
-      root element (<tt>this.el</tt>). By default, <tt>delegateEvents</tt> is called
-      within the View's constructor for you, so if you have a simple <tt>events</tt>
-      hash, all of your DOM events will always already be connected, and you will
-      never have to call this function yourself.
+        采用 jQuery 的<tt>on</tt>函数来为视图内的 DOM 事件提供回调函数声明。 
+        如果未传入 <b>events</b> 对象，使用  <tt>this.events</tt> 作为事件源。 
+        事件对象的书写格式为 <tt>{"event selector": "callback"}</tt>。 
+        省略 <tt>selector</tt> 则事件被绑定到视图的根元素（<tt>this.el</tt>）。 
+        默认情况下，<tt>delegateEvents</tt> 会在视图的构造函数内被调用，因此如果有 <tt>events</tt> 对象，所有的 DOM 事件已经被连接， 并且我们永远不需要去手动调用本函数。
     </p>
 
     <p>
-      The <tt>events</tt> property may also be defined as a function that returns
-      an <b>events</b> hash, to make it easier to programmatically define your
-      events, as well as inherit them from parent views.
+        <tt>events</tt> 属性也可以被定义成返回 <b>events</b> 对象的函数，这样让我们定义事件，以及实现事件的继承变得更加方便。
     </p>
 
     <p>
-      Using <b>delegateEvents</b> provides a number of advantages over manually
-      using jQuery to bind events to child elements during <a href="#View-render">render</a>. All attached
-      callbacks are bound to the view before being handed off to jQuery, so when
-      the callbacks are invoked, <tt>this</tt> continues to refer to the view object. When
-      <b>delegateEvents</b> is run again, perhaps with a different <tt>events</tt>
-      hash, all callbacks are removed and delegated afresh &mdash; useful for
-      views which need to behave differently when in different modes.
+        视图  <a href="#View-render">render</a> 期间使用 <b>delegateEvents</b> 相比用 jQuery 向子元素绑定事件有更多优点。 所有注册的函数在传递给 jQuery 之前已被绑定到视图上，因此当回调函数执行时， <tt>this</tt> 仍将指向视图对象。 当 <b>delegateEvents</b> 再次运行，此时或许需要一个不同的 <tt>events</tt> 对象，所以所有回调函数将被移除，然后重新委托 &mdash; 这对模型不同行为也不同的视图挺有用处。
     </p>
 
     <p>
-      A view that displays a document in a search result might look
-      something like this:
+        搜索结果页面显示文档的视图看起来类似这样：
     </p>
 
 <pre>
@@ -2958,19 +2505,18 @@ var DocumentView = Backbone.View.extend({
     <p id="View-undelegateEvents">
       <b class="header">undelegateEvents</b><code>undelegateEvents()</code>
       <br />
-      Removes all of the view's delegated events. Useful if you want to disable
-      or remove a view from the DOM temporarily.
+        删除视图所有委托事件。如果要从临时的DOM中禁用或删除视图时，比较有用。
     </p>
 
-    <h2 id="Utility">Utility</h2>
+    <h2 id="Utility">Utility（实用功能）</h2>
 
     <p id="Utility-Backbone-noConflict">
       <b class="header">Backbone.noConflict</b><code>var backbone = Backbone.noConflict();</code>
       <br />
-      Returns the <tt>Backbone</tt> object back to its original value. You can
-      use the return value of <tt>Backbone.noConflict()</tt> to keep a local
-      reference to Backbone. Useful for embedding Backbone on third-party
-      websites, where you don't want to clobber the existing Backbone.
+        返回 <tt>Backbone</tt> 对象的原始值。
+        您可以使用<tt>Backbone.noConflict()</tt>的返回值以保持局部引用Backbone。
+        
+        通常用于在第三方网站上引入了多个 Backbone 文件，避免冲突。
     </p>
 
 <pre>
@@ -2981,10 +2527,12 @@ var model = localBackbone.Model.extend(...);
     <p id="Utility-Backbone-$">
       <b class="header">Backbone.$</b><code>Backbone.$ = $;</code>
       <br />
-      If you have multiple copies of <tt>jQuery</tt> on the page, or simply want
-      to tell Backbone to use a particular object as its DOM / Ajax library,
-      this is the property for you. If you're loading Backbone with CommonJS
-      (e.g. node, component, or browserify) you must set this property manually.
+        如果页面上有多个<tt>jQuery</tt>副本，
+        或者只是想告诉Backbone使用特定对象作为其DOM / Ajax库，
+        那么这个属性可以为您服务。
+         如果您正在使用CommonJS加载Backbone
+        （例如，节点，组件，或browserify）
+        您必须手动设置该属性。
     </p>
 
 <pre>
@@ -3014,7 +2562,7 @@ var Backbone.$ = require('jquery');
       <li>
         Backbone does not force you to use a single template engine. Views can bind
         to HTML constructed in
-        <a href="http://underscorejs.org/#template">your</a>
+        <a href="http://www.css88.com/doc/underscore/#template">your</a>
         <a href="http://guides.rubyonrails.org/layouts_and_rendering.html">favorite</a>
         <a href="http://mustache.github.com">way</a>.
       </li>
@@ -3033,7 +2581,7 @@ var Backbone.$ = require('jquery');
         building block, not a difficult-to-reason-about run loop, or by constantly
         polling and traversing your data structures to hunt for changes. And if
         you want a specific event to be asynchronous and aggregated,
-        <a href="http://underscorejs.org/#debounce">no problem</a>.
+        <a href="http://www.css88.com/doc/underscore/#debounce">no problem</a>.
       </li>
       <li>
         Backbone scales well, from <a href="http://disqus.com">embedded widgets</a>
@@ -3107,7 +2655,7 @@ var Backbone.$ = require('jquery');
 
     <p>
       <b>Render the UI</b> as you see fit. Backbone is agnostic as to whether you
-      use <a href="http://underscorejs.org/#template">Underscore templates</a>,
+      use <a href="http://www.css88.com/doc/underscore/#template">Underscore templates</a>,
       <a href="https://github.com/janl/mustache.js">Mustache.js</a>, direct DOM
       manipulation, server-side rendered snippets of HTML, or
       <a href="http://jqueryui.com/">jQuery UI</a> in your <tt>render</tt> function.
@@ -3280,14 +2828,14 @@ inbox.messages.fetch({reset: true});
       or the optional <tt>context</tt> argument that many of Underscore
       and Backbone's methods use to specify the <tt>this</tt>
       that will be used when the callback is later invoked. (See
-      <a href="http://underscorejs.org/#each">_.each</a>,
-      <a href="http://underscorejs.org/#map">_.map</a>, and
+      <a href="http://www.css88.com/doc/underscore/#each">_.each</a>,
+      <a href="http://www.css88.com/doc/underscore/#map">_.map</a>, and
       <a href="#Events-on">object.on</a>, to name a few).
       <a href="#View-delegateEvents">View events</a> are automatically bound to
       the view's context for you.
       You may also find it helpful to use
-      <a href="http://underscorejs.org/#bind">_.bind</a> and
-      <a href="http://underscorejs.org/#bindAll">_.bindAll</a>
+      <a href="http://www.css88.com/doc/underscore/#bind">_.bind</a> and
+      <a href="http://www.css88.com/doc/underscore/#bindAll">_.bindAll</a>
       from Underscore.js.
     </p>
 
@@ -3525,7 +3073,7 @@ ActiveRecord::Base.include_root_in_json = false
       blogs. Backbone.js underlies the front-end application code that powers
       everything from user authentication to post authoring, commenting, and even serving
       ads. The JavaScript stack includes
-      <a href="http://underscorejs.org/">Underscore.js</a> and
+      <a href="http://www.css88.com/doc/underscore/">Underscore.js</a> and
       <a href="http://jquery.com/">jQuery</a>, with some plugins,
       all loaded with
       <a href="http://requirejs.org/">RequireJS</a>. Closure templates are shared between the
@@ -3748,7 +3296,7 @@ ActiveRecord::Base.include_root_in_json = false
       <a href="http://pitchfork.com/">Pitchfork</a> uses Backbone.js to power
       its site-wide audio player, <a href="http://pitchfork.com/tv/">Pitchfork.tv</a>,
       location routing, a write-thru page fragment cache, and more. Backbone.js
-      (and <a href="http://underscorejs.org/">Underscore.js</a>) helps the team
+      (and <a href="http://www.css88.com/doc/underscore/">Underscore.js</a>) helps the team
       create clean and modular components,
       move very quickly, and focus on the site, not the spaghetti.
     </p>
@@ -3927,7 +3475,7 @@ ActiveRecord::Base.include_root_in_json = false
       <a href="http://m.soundcloud.com">SoundCloud Mobile</a>. The project uses
       the public SoundCloud <a href="http://soundcloud.com/developers">API</a>
       as a data source (channeled through a nginx proxy),
-      <a href="http://api.jquery.com/category/plugins/templates/">jQuery templates</a>
+      <a href="http://www.css88.com/jqapi-1.9/category/plugins/templates/">jQuery templates</a>
       for the rendering, <a href="http://docs.jquery.com/Qunit">Qunit
       </a> and <a href="http://www.phantomjs.org/">PhantomJS</a> for
       the testing suite. The JS code, templates and CSS are built for the
@@ -4563,7 +4111,7 @@ ActiveRecord::Base.include_root_in_json = false
       </li>
       <li>
         A Backbone collection's <tt>comparator</tt> function may now behave
-        either like a <a href="http://underscorejs.org/#sortBy">sortBy</a>
+        either like a <a href="http://www.css88.com/doc/underscore/#sortBy">sortBy</a>
         (pass a function that takes a single argument),
         or like a <a href="https://developer.mozilla.org/JavaScript/Reference/Global_Objects/Array/sort">sort</a>
         (pass a comparator function that expects two arguments). The comparator
@@ -4784,7 +4332,5 @@ ActiveRecord::Base.include_root_in_json = false
       $('[data-original]').lazyload();
     });
   </script>
-
 </body>
 </html>
-
